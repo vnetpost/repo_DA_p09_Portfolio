@@ -2,15 +2,15 @@
 
 .header {
   &__inner {
-    height: clamp(5rem, 10vw, styles.$header-height);
-    padding: 0 clamp(1.2rem, 6vw, styles.$header-pad-x);
+    height: styles.$header-height;
+    padding: 0 styles.$g-pad-x;
     @include styles.setFlex($jc: space-between);
   }
 
   &__logo {
     img {
       display: block;
-      height: 1.75rem;
+      height: 3rem;
       width: auto;
     }
   }
@@ -40,7 +40,6 @@
 
   &__burger-menu {
     border: 0;
-    // border: 1px solid red;
     background: transparent;
     cursor: pointer;
 
@@ -62,18 +61,18 @@
 
   &__panel {
     width: 100%;
-    max-width: 1440px;
-    min-height: calc(100vh - clamp(5rem, 10vw, styles.$header-height));
-    height: 100%;
+    max-width: styles.$g-max-width;
+    height: calc(100vh - styles.$header-height);
+    // height: 100%;
     margin: 0 auto;
-    @include styles.setFlex($d: column, $jc: flex-start, $ac: stretch);
+    @include styles.setFlex($d: column, $jc: flex-start, $ai: stretch);
   }
 
   &__nav {
     flex: 1;
     @include styles.setFlex($d: column, $gap: clamp(3rem, 5vw, 4rem));
     text-align: center;
-    padding: 0 clamp(1.2rem, 6vw, styles.$header-pad-x) clamp(4rem, 8vw, 5rem);
+    padding: 0 styles.$g-pad-x clamp(4rem, 8vw, 5rem);
 
     a {
       color: #000000;
@@ -91,21 +90,25 @@
     height: 33vh;
     background: #000;
     color: #fff;
-    padding: clamp(2rem, 6vw, 5rem) clamp(1.2rem, 6vw, styles.$header-pad-x);
-    @include styles.setFlex($jc: space-between, $ac: flex-end, $gap: 3rem);
+    padding: clamp(2rem, 6vw, 5rem) styles.$g-pad-x;
+    @include styles.setFlex($jc: space-between, $ai: flex-end, $gap: 3rem);
     overflow: hidden;
 
     clip-path: polygon(0 10%, 100% clamp(20%, 20vw, 70%), 100% 100%, 0 100%);
   }
 
   &__contact {
-    @include styles.setFlex($d: column, $jc: flex-start, $ac: flex-start);
+    @include styles.setFlex($d: column, $jc: flex-start, $ai: flex-start);
 
     h2 {
       margin: 0;
       font-weight: 800;
       font-size: styles.$menu-overlay-title-size;
       line-height: 0.9;
+
+      &:hover {
+        color: #00bc8f;
+      }
     }
 
     .menu-overlay__mail {

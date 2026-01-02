@@ -1,8 +1,8 @@
-@mixin setFlex($d: row, $jc: center, $ac: center, $wrap: nowrap, $gap: 0, $display: flex) {
+@mixin setFlex($d: row, $jc: center, $ai: center, $wrap: nowrap, $gap: 0, $display: flex) {
   display: $display;
   flex-direction: $d;
   justify-content: $jc;
-  align-items: $ac;
+  align-items: $ai;
   flex-wrap: $wrap;
   gap: $gap;
 }

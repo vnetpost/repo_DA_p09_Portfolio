@@ -1,0 +1,145 @@
+@use '../../../styles/index' as styles;
+
+.hero {
+  height: calc(100vh - styles.$header-height);
+  padding: clamp(2rem, 6vw, 6rem) styles.$g-pad-x;
+  position: relative;
+  // overflow: hidden;
+  @include styles.setFlex($d: column);
+  gap: clamp(2rem, 6vw, 4rem);
+  color: #111;
+  font-family: 'Syne', sans-serif;
+  max-width: styles.$g-max-width;
+  width: 100%;
+
+  &__content {
+    @include styles.setFlex($d: column);
+    position: absolute;
+    top: 0;
+    transform: translateY(40%);
+    width: 85%;
+    // margin-left: clamp(0rem, 4vw, 4rem);
+  }
+
+  &__title-group {
+    @include styles.setFlex($d: column);
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+
+  &__title {
+    @include styles.setFlex($d: column, $ai: flex-end);
+    gap: clamp(0.5rem, 2vw, 1.2rem);
+    font-size: clamp(2rem, 9vw, 12.5rem);
+    font-weight: 800;
+    line-height: 0.8;
+    letter-spacing: -0.02em;
+    animation: hero-rise 650ms ease-out;
+  }
+
+  &__title-line {
+    display: block;
+  }
+
+  &__down {
+    @include styles.setFlex($gap: clamp(1rem, 3vw, 2.5rem));
+    width: clamp(26rem, 60vw, 72rem);
+    width: 100%;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 2.4vw, 2.6rem);
+    animation: hero-rise 650ms ease-out;
+  }
+
+  &__line {
+    flex: 1;
+    width: clamp(9rem, 28vw, 40rem);
+    height: 0.2rem;
+    background: #000000;
+  }
+
+  &__name {
+    color: #00bc8f;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+  }
+
+  &__email {
+    position: absolute;
+    left: styles.$g-pad-x;
+    bottom: clamp(4rem, 10vw, 8rem);
+    color: #000000;
+    font-family: 'Overpass', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    text-decoration: none;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+
+  &__scroll {
+    position: absolute;
+    right: clamp(1.2rem, 4vw, 4rem);
+    bottom: clamp(4rem, 10vw, 8rem);
+    @include styles.setFlex($d: column, $jc: space-between);
+    width: 5rem;
+    height: 20rem;
+  }
+
+  &__arrow-wrapper {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    @include styles.setFlex();
+  }
+
+  &__arrow {
+    flex: 1;
+    width: 100%;
+    display: block;
+    opacity: 1;
+    animation: arrow-fall 1.3s ease-out infinite;
+  }
+
+  &__scroll-text {
+    margin-bottom: 0;
+    color: #000000;
+    font-family: 'Overpass', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrow-fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-15rem);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-10rem);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5rem);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(15rem);
+  }
+}

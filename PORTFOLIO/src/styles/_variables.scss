@@ -1,9 +1,9 @@
 $bg-color: #fffcf3;
 
-$header-text: #111;
+$g-pad-x: clamp(1.2rem, 6vw, 7.5rem);
+$g-max-width: 1440px;
 
+$header-text: #111;
 $header-height: 5.5rem;
-$header-pad-x: 5rem;
-$header-slope-height: 200px;
 
 $menu-overlay-title-size: clamp(2em, 7vw, 6em);
