@@ -1,0 +1,163 @@
+@use '../../../styles/index' as styles;
+
+.header {
+  &__inner {
+    height: clamp(5rem, 10vw, styles.$header-height);
+    padding: 0 clamp(1.2rem, 6vw, styles.$header-pad-x);
+    @include styles.setFlex($jc: space-between);
+  }
+
+  &__logo {
+    img {
+      display: block;
+      height: 1.75rem;
+      width: auto;
+    }
+  }
+
+  &__lang-and-menu {
+    @include styles.setFlex($gap: 2rem);
+  }
+
+  &__lang-buttons {
+    @include styles.setFlex($gap: 0.5rem);
+  }
+
+  &__lang-button {
+    border: 0.2rem solid transparent;
+    background: transparent;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    line-height: 1;
+
+    &--active {
+      border-color: #00bc8f;
+    }
+  }
+
+  &__burger-menu {
+    border: 0;
+    // border: 1px solid red;
+    background: transparent;
+    cursor: pointer;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      display: block;
+    }
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  top: clamp(5rem, 10vw, styles.$header-height);
+  font-family: 'Syne', sans-serif;
+  background-color: styles.$bg-color;
+
+  &__panel {
+    width: 100%;
+    max-width: 1440px;
+    min-height: calc(100vh - clamp(5rem, 10vw, styles.$header-height));
+    height: 100%;
+    margin: 0 auto;
+    @include styles.setFlex($d: column, $jc: flex-start, $ac: stretch);
+  }
+
+  &__nav {
+    flex: 1;
+    @include styles.setFlex($d: column, $gap: clamp(3rem, 5vw, 4rem));
+    text-align: center;
+    padding: 0 clamp(1.2rem, 6vw, styles.$header-pad-x) clamp(4rem, 8vw, 5rem);
+
+    a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: styles.$menu-overlay-title-size;
+      display: inline-flex;
+      align-items: center;
+      gap: clamp(1rem, 3vw, 2.2rem);
+    }
+  }
+
+  &__footer {
+    position: relative;
+    height: 33vh;
+    background: #000;
+    color: #fff;
+    padding: clamp(2rem, 6vw, 5rem) clamp(1.2rem, 6vw, styles.$header-pad-x);
+    @include styles.setFlex($jc: space-between, $ac: flex-end, $gap: 3rem);
+    overflow: hidden;
+
+    clip-path: polygon(0 10%, 100% clamp(20%, 20vw, 70%), 100% 100%, 0 100%);
+  }
+
+  &__contact {
+    @include styles.setFlex($d: column, $jc: flex-start, $ac: flex-start);
+
+    h2 {
+      margin: 0;
+      font-weight: 800;
+      font-size: styles.$menu-overlay-title-size;
+      line-height: 0.9;
+    }
+
+    .menu-overlay__mail {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #ffffffd6;
+      text-decoration: none;
+      font-size: clamp(1em, calc(0.9em + 0.4vw), 1.3em);
+
+      font-family: 'Overpass', sans-serif;
+      font-weight: 300;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__contact-icons {
+    @include styles.setFlex($display: inline-flex, $jc: flex-start, $gap: 1.125rem);
+
+    a {
+      text-decoration: none;
+      position: relative;
+      width: 3rem;
+      height: 3rem;
+      @include styles.setFlex($display: inline-flex);
+
+      .menu-overlay__icon {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &--hover {
+          position: absolute;
+          opacity: 0;
+          transition: opacity 160ms ease;
+        }
+      }
+
+      &:hover {
+        .menu-overlay__icon--hover {
+          opacity: 1;
+        }
+
+        .menu-overlay__icon:not(.menu-overlay__icon--hover) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}

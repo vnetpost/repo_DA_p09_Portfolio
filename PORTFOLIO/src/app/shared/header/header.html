@@ -1,8 +1,109 @@
-<header>
-    <img src="/assets/img/logo/logo.png" alt="logo.png" srcset="" />
-    <div>
-        <p>EN</p>
-        <p>DE</p>
+<header class="header">
+  <section class="header__inner">
+    <a class="header__logo" routerLink="/" aria-label="Go to homepage">
+      <img src="/assets/img/logo/logo.png" alt="Babak Anvari" />
+    </a>
+    <div class="header__lang-and-menu" aria-label="Language and menu controls">
+      <div class="header__lang-buttons" aria-label="Language selection">
+        <button
+          type="button"
+          class="header__lang-button"
+          (click)="setLang('en')"
+          [class.header__lang-button--active]="lang === 'en'"
+        >
+          EN
+        </button>
+
+        <button
+          type="button"
+          class="header__lang-button"
+          (click)="setLang('de')"
+          [class.header__lang-button--active]="lang === 'de'"
+        >
+          DE
+        </button>
+      </div>
+
+      @if (isMenuOpen) {
+      <button
+        type="button"
+        class="header__burger-menu"
+        (click)="closeMenu()"
+        [attr.aria-expanded]="true"
+        aria-controls="mobile-menu"
+        aria-label="Close navigation menu"
+      >
+        <img src="/assets/img/icons/close.png" alt="Close menu icon" />
+      </button>
+      } @else {
+      <button
+        type="button"
+        class="header__burger-menu"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="false"
+        aria-controls="mobile-menu"
+        aria-label="Open navigation menu"
+      >
+        <img src="/assets/img/icons/burger.png" alt="Open menu icon" />
+      </button>
+      }
     </div>
-    
+  </section>
+
+  @if (isMenuOpen) {
+  <section
+    id="mobile-menu"
+    class="menu-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Main navigation menu"
+  >
+    <div class="menu-overlay__panel">
+      <nav class="menu-overlay__nav" aria-label="Main navigation">
+        <a routerLink="/about" (click)="closeMenu()">About me</a>
+        <a routerLink="/skills" (click)="closeMenu()">My skills</a>
+        <a routerLink="/portfolio" (click)="closeMenu()">Portfolio</a>
+      </nav>
+
+      <section
+        class="menu-overlay__footer menu-overlay__slope"
+        aria-label="footer with Contact information"
+      >
+        <div class="menu-overlay__contact">
+          <h2>Say Hi!</h2>
+          <a class="menu-overlay__mail" href="mailto:info@babak-anvari.com"
+            >info@babak-anvari.com
+          </a>
+        </div>
+
+        <div class="menu-overlay__contact-icons">
+          <a href="#" aria-label="GitHub profile">
+            <img class="menu-overlay__icon" src="/assets/img/icons/github.png" alt="GitHub" />
+            <img
+              class="menu-overlay__icon menu-overlay__icon--hover"
+              src="/assets/img/icons/github-hover.png"
+              alt=""
+            />
+          </a>
+          <a href="#" aria-label="Send email">
+            <img class="menu-overlay__icon" src="/assets/img/icons/mail.png" alt="Mail" />
+            <img
+              class="menu-overlay__icon menu-overlay__icon--hover"
+              src="/assets/img/icons/mail-hover.png"
+              alt=""
+            />
+          </a>
+          <a href="#" aria-label="LinkedIn profile">
+            <img class="menu-overlay__icon" src="/assets/img/icons/linkedIn.png" alt="LinkedIn" />
+            <img
+              class="menu-overlay__icon menu-overlay__icon--hover"
+              src="/assets/img/icons/linkedIn-hover.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </section>
+    </div>
+  </section>
+  }
 </header>

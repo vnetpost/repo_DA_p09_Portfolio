@@ -26,8 +26,17 @@ html {
 
     height: 100dvh;
 
-    @include styles.flex($d: column, $jc: '', $ac: '', $wrap: '', $gap: 0);
+    @include styles.setFlex($d: column,
+      $jc: '',
+      $ac: '',
+      $wrap: '',
+      $gap: 0
+    );
 
     background-color: styles.$bg-color;
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
