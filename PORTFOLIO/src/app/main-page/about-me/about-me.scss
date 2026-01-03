@@ -1,0 +1,151 @@
+@use '../../../styles/index' as styles;
+
+.about-me {
+  border: 1px solid red;
+  position: relative;
+  padding: clamp(5rem, 8vw, 8rem) styles.$g-pad-x clamp(7rem, 12vw, 11rem);
+  max-width: styles.$g-max-width;
+  width: 100%;
+  height: 100dvh;
+  @include styles.setFont();
+
+  &__content {
+    border: 1px solid red;
+    @include styles.setFlex($d: column, $ai: flex-start, $gap: clamp(2.5rem, 6vw, 4rem));
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    border: 1px solid red;
+    margin: 0;
+    @include styles.setFont(
+      $family: (
+        'Syne',
+        sans-serif,
+      ),
+      $size: clamp(3.4rem, 6.5vw, 7.8rem),
+      $weight: 800,
+      $line-height: 0.8
+    );
+
+    &:hover {
+      @include styles.setFont($family: null, $size: null, $color: #00bc8f);
+    }
+  }
+
+  &__body {
+    border: 1px solid red;
+    @include styles.setFlex($jc: space-between, $ai: flex-start);
+    width: 100%;
+  }
+
+  &__body-left {
+    border: 1px solid red;
+    @include styles.setFlex(
+      $d: column,
+      $ai: flex-start,
+      $jc: flex-start,
+      $gap: clamp(2rem, 4vw, 3rem)
+    );
+    height: 100%;
+    // max-width: 60rem;
+    width: clamp(28rem, 55vw, 60rem);
+  }
+
+  &__text {
+    @include styles.setFlex($d: column, $ai: flex-start, $gap: clamp(1.6rem, 2.8vw, 2.6rem));
+  }
+
+  &__description {
+    border: 1px solid red;
+    @include styles.setFont($size: clamp(1em, 2vw, 1.3em), $line-height: 1.2);
+  }
+
+  &__highlights {
+    list-style: none;
+    @include styles.setFlex($d: column, $ai: flex-start, $gap: 1.8rem);
+  }
+
+  &__highlight {
+    @include styles.setFlex($jc: flex-start, $ai: center, $gap: 1.4rem);
+    @include styles.setFont($size: clamp(1.5rem, 2vw, 1.9rem), $weight: 400);
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__cta {
+    @include styles.setFlex($display: flex);
+    width: 17rem;
+    padding: 1rem 3rem;
+    border: 0.3rem solid #000000;
+    text-decoration: none;
+    @include styles.setFont($size: 1.6rem, $weight: 400);
+    align-self: center;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.5rem 1.5rem #00000037;
+    }
+  }
+
+  &__body-right {
+    border: 1px solid red;
+    flex: 0 1 clamp(28rem, 40vw, 52rem);
+    // width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-me {
+    &__content {
+      align-items: stretch;
+      gap: clamp(2rem, 6vw, 3rem);
+      height: auto;
+    }
+
+    &__body {
+      flex-direction: column;
+      align-items: stretch;
+      gap: clamp(2rem, 6vw, 3rem);
+    }
+
+    &__body-left {
+      width: 100%;
+    }
+
+    &__body-right {
+      max-width: 100%;
+      align-self: center;
+      margin-left: 0;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__description {
+      max-width: 100%;
+    }
+
+    &__cta {
+      align-self: center;
+    }
+  }
+}

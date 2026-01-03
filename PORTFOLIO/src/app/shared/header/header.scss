@@ -10,7 +10,7 @@
   &__logo {
     img {
       display: block;
-      height: 3rem;
+      height: 3.5rem;
       width: auto;
     }
   }
@@ -26,12 +26,14 @@
   &__lang-button {
     border: 0.2rem solid transparent;
     background: transparent;
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 1em;
+    @include styles.setFont(
+      $family: ('Syne', sans-serif),
+      $size: 1em,
+      $weight: 700,
+      $line-height: 1
+    );
     padding: 0.2rem 0.4rem;
     cursor: pointer;
-    line-height: 1;
 
     &--active {
       border-color: #00bc8f;
@@ -56,7 +58,7 @@
   inset: 0;
   z-index: 1;
   top: clamp(5rem, 10vw, styles.$header-height);
-  font-family: 'Syne', sans-serif;
+  @include styles.setFont($family: ('Syne', sans-serif));
   background-color: styles.$bg-color;
 
   &__panel {
@@ -75,10 +77,12 @@
     padding: 0 styles.$g-pad-x clamp(4rem, 8vw, 5rem);
 
     a {
-      color: #000000;
       text-decoration: none;
-      font-weight: 700;
-      font-size: styles.$menu-overlay-title-size;
+      @include styles.setFont(
+        $family: ('Syne', sans-serif),
+        $size: styles.$menu-overlay-title-size,
+        $weight: 700
+      );
       display: inline-flex;
       align-items: center;
       gap: clamp(1rem, 3vw, 2.2rem);
@@ -89,7 +93,7 @@
     position: relative;
     height: 33vh;
     background: #000;
-    color: #fff;
+    @include styles.setFont($family: null, $size: null, $style: null, $color: #fff);
     padding: clamp(2rem, 6vw, 5rem) styles.$g-pad-x;
     @include styles.setFlex($jc: space-between, $ai: flex-end, $gap: 3rem);
     overflow: hidden;
@@ -102,27 +106,31 @@
 
     h2 {
       margin: 0;
-      font-weight: 800;
-      font-size: styles.$menu-overlay-title-size;
-      line-height: 0.9;
+      @include styles.setFont(
+        $family: ('Syne', sans-serif),
+        $size: styles.$menu-overlay-title-size,
+        $weight: 800,
+        $line-height: 0.9,
+        $color: #FFFCF3
+      );
 
       &:hover {
-        color: #00bc8f;
+        @include styles.setFont($family: null, $size: null, $style: null, $color: #00bc8f);
       }
     }
 
     .menu-overlay__mail {
       display: inline-block;
       margin-top: 1rem;
-      color: #ffffffd6;
       text-decoration: none;
-      font-size: clamp(1em, calc(0.9em + 0.4vw), 1.3em);
-
-      font-family: 'Overpass', sans-serif;
-      font-weight: 300;
+      @include styles.setFont(
+        $size: clamp(1em, calc(0.9em + 0.4vw), 1.3em),
+        $weight: 300,
+        $color: #ffffffd6
+      );
 
       &:hover {
-        color: #fff;
+        @include styles.setFont($family: null, $size: null, $style: null, $color: #fff);
       }
     }
   }

@@ -6,3 +6,21 @@
   flex-wrap: $wrap;
   gap: $gap;
 }
+
+@mixin setFont(
+  $family: ('Overpass', sans-serif),
+  $size: 1em,
+  $weight: null,
+  $line-height: null,
+  $letter-spacing: null,
+  $style: normal,
+  $color: #000000
+) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  font-style: $style;
+  color: $color;
+}
