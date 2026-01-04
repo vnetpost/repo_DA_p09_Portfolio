@@ -8,10 +8,11 @@
   }
 
   &__logo {
+    @include styles.setFlex();
+
     img {
-      display: block;
-      height: 3.5rem;
-      width: auto;
+      width: 6.6rem;
+      // filter: invert(1);
     }
   }
 
@@ -27,7 +28,10 @@
     border: 0.2rem solid transparent;
     background: transparent;
     @include styles.setFont(
-      $family: ('Syne', sans-serif),
+      $family: (
+        'Syne',
+        sans-serif,
+      ),
       $size: 1em,
       $weight: 700,
       $line-height: 1
@@ -58,7 +62,12 @@
   inset: 0;
   z-index: 1;
   top: clamp(5rem, 10vw, styles.$header-height);
-  @include styles.setFont($family: ('Syne', sans-serif));
+  @include styles.setFont(
+    $family: (
+      'Syne',
+      sans-serif,
+    )
+  );
   background-color: styles.$bg-color;
 
   &__panel {
@@ -79,7 +88,10 @@
     a {
       text-decoration: none;
       @include styles.setFont(
-        $family: ('Syne', sans-serif),
+        $family: (
+          'Syne',
+          sans-serif,
+        ),
         $size: styles.$menu-overlay-title-size,
         $weight: 700
       );
@@ -107,11 +119,14 @@
     h2 {
       margin: 0;
       @include styles.setFont(
-        $family: ('Syne', sans-serif),
+        $family: (
+          'Syne',
+          sans-serif,
+        ),
         $size: styles.$menu-overlay-title-size,
         $weight: 800,
         $line-height: 0.9,
-        $color: #FFFCF3
+        $color: #fffcf3
       );
 
       &:hover {
@@ -135,22 +150,19 @@
     }
   }
 
-  &__contact-icons {
-    @include styles.setFlex($display: inline-flex, $jc: flex-start, $gap: 1.125rem);
+  &__social-links {
+    @include styles.setFlex($jc: flex-start, $gap: 1.125rem);
 
     a {
       text-decoration: none;
-      position: relative;
-      width: 3rem;
-      height: 3rem;
-      @include styles.setFlex($display: inline-flex);
+      @include styles.setFlex();
 
       .menu-overlay__icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 4rem;
 
         &--hover {
           position: absolute;
+          inset: 0;
           opacity: 0;
           transition: opacity 160ms ease;
         }
