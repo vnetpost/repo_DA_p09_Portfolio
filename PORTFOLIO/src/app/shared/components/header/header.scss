@@ -12,6 +12,7 @@
 
     img {
       width: 6.6rem;
+      height: 3rem;
       // filter: invert(1);
     }
   }
@@ -61,7 +62,7 @@
   position: fixed;
   inset: 0;
   z-index: 1;
-  top: clamp(5rem, 10vw, styles.$header-height);
+  top: styles.$header-height;
   @include styles.setFont(
     $family: (
       'Syne',
