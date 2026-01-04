@@ -43,7 +43,6 @@
   }
 
   &__title-line {
-    display: block;
   }
 
   &__down {
@@ -80,7 +79,7 @@
     writing-mode: vertical-lr;
     transform: rotate(180deg);
   }
-  
+
   &__scroll {
     position: absolute;
     right: styles.$g-pad-x;
@@ -100,7 +99,6 @@
   &__arrow {
     flex: 1;
     width: 100%;
-    display: block;
     opacity: 1;
     animation: arrow-fall 1.3s ease-out infinite;
   }

@@ -1,4 +1,4 @@
-@use '../../../styles/index' as styles;
+@use '../../../../styles/index' as styles;
 
 .header {
   &__inner {
@@ -146,7 +146,6 @@
       @include styles.setFlex($display: inline-flex);
 
       .menu-overlay__icon {
-        display: block;
         width: 2.5rem;
         height: 2.5rem;
 

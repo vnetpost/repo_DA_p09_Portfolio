@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UserDatabankService } from '../../shared/services/userDatabankService/user-databank-service';
 
 @Component({
   selector: 'app-skills',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './skills.scss',
 })
 export class Skills {
+  userDBS = inject(UserDatabankService);
 
 }
