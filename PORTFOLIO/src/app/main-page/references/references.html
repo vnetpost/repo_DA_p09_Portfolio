@@ -1,1 +1,20 @@
-<p>references works!</p>
+<section class="references" aria-labelledby="references-title">
+  <div class="references__frame">
+    <h2 class="references__title" id="references-title">References</h2>
+    <p class="references__intro">
+      I thrive both independently and as part of a team. Here's what my colleagues have to say about
+      working with me.
+    </p>
+
+    <div class="references__list">
+      @for(item of userDBS.referencesList; track item.name; let idx=$index){
+      <article class="references__card">
+        <img class="references__quote" src="/assets/img/icons/quote.svg" alt="Quote icon" />
+        <h3 class="references__name">{{ item.name }}</h3>
+        <p class="references__role">{{ item.role }}</p>
+        <p class="references__text">{{ item.text }}</p>
+      </article>
+      }
+    </div>
+  </div>
+</section>

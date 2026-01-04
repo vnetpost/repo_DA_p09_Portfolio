@@ -9,5 +9,4 @@ import { UserDatabankService } from '../../shared/services/userDatabankService/u
 })
 export class Skills {
   userDBS = inject(UserDatabankService);
-
 }
