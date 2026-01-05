@@ -5,14 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class UserDatabankService {
   skillsList = [
-    { name: 'Angular', imgPath: '/assets/img/icons/angular.svg' },
-    { name: 'TypeScript', imgPath: '/assets/img/icons/ts.svg' },
-    { name: 'JavaScript', imgPath: '/assets/img/icons/js.svg' },
-    { name: 'HTML', imgPath: '/assets/img/icons/html.svg' },
-    { name: 'CSS', imgPath: '/assets/img/icons/css.svg' },
-    { name: 'Firebase', imgPath: '/assets/img/icons/firebase.svg' },
-    { name: 'Git', imgPath: '/assets/img/icons/git.svg' },
-    { name: 'REST-API', imgPath: '/assets/img/icons/api.svg' },
+    { name: 'Angular', imgPath: '/assets/img/icons/skills-icons/angular.svg' },
+    { name: 'TypeScript', imgPath: '/assets/img/icons/skills-icons/ts.svg' },
+    { name: 'JavaScript', imgPath: '/assets/img/icons/skills-icons/js.svg' },
+    { name: 'HTML', imgPath: '/assets/img/icons/skills-icons/html.svg' },
+    { name: 'CSS', imgPath: '/assets/img/icons/skills-icons/css.svg' },
+    { name: 'Firebase', imgPath: '/assets/img/icons/skills-icons/firebase.svg' },
+    { name: 'Git', imgPath: '/assets/img/icons/skills-icons/git.svg' },
+    { name: 'REST-API', imgPath: '/assets/img/icons/skills-icons/api.svg' },
   ];
 
   emailAddress: string = 'info@babak-anvari.com';
