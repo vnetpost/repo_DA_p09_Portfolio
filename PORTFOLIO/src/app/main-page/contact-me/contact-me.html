@@ -1,0 +1,56 @@
+<section class="contact-me" aria-label="Contact me">
+  <div class="contact-me__frame">
+    <h2 class="contact-me__title" id="contact-title">Say Hi!</h2>
+
+    <div class="contact-me__content">
+      <p class="contact-me__headline">Want to discuss a new project?</p>
+      <p class="contact-me__subheadline">Say hello! let's discuss your ideas and make it happen</p>
+
+      <form class="contact-me__form" aria-labelledby="contact-title">
+        <!-- <label class="contact-me__field">
+          <span class="contact-me__label">Your name</span>
+          <input class="contact-me__input" type="text" name="name" />
+        </label> -->
+        <input class="contact-me__input" type="text" name="name" placeholder="Your name" />
+
+        <!-- <label class="contact-me__field">
+          <span class="contact-me__label">Your email</span>
+          <input class="contact-me__input" type="email" name="email" />
+        </label> -->
+        <input class="contact-me__input" type="email" name="email" placeholder="Your email" />
+
+        <!-- <label class="contact-me__field contact-me__field--message">
+          <span class="contact-me__label">Your message</span>
+          <textarea class="contact-me__textarea" name="message" rows="4"></textarea>
+        </label> -->
+        <textarea
+          class="contact-me__textarea"
+          name="message"
+          rows="4"
+          placeholder="Your message"
+        ></textarea>
+
+        <label class="contact-me__checkbox">
+          <div class="contact-me__checkbox-input-container">
+            <input class="contact-me__checkbox-input" type="checkbox" name="privacy" />
+            <img
+              class="contact-me__checkbox-input-check-icon"
+              src="/assets/img/icons/check.svg"
+              alt="check.svg"
+            />
+          </div>
+          <span class="contact-me__checkbox-text">
+            I have read the
+            <a class="contact-me__link" href="#">privacy policy</a>
+            and agree to the processing of my data as outlined.
+          </span>
+        </label>
+
+        <button class="contact-me__submit" type="submit" disabled>Send message</button>
+      </form>
+    </div>
+    <a class="contact-me__jump-top" href="" aria-hidden="true">
+      <img class="contact-me__jump-top-icon" src="/assets/img/icons/arrow.svg" alt="arrow.svg" />
+    </a>
+  </div>
+</section>

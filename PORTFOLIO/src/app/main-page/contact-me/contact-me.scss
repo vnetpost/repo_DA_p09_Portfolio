@@ -1,0 +1,220 @@
+@use '../../../styles/index' as styles;
+
+.contact-me {
+  border: 1px solid red;
+  //   position: relative;
+  background: #000000;
+  //   overflow: hidden;
+  padding: clamp(10rem, 18vw, 14rem) styles.$g-pad-x clamp(8rem, 14vw, 12rem);
+  @include styles.setFont($color: #ffffff);
+  //   height: 100dvh;
+  //   height: calc(100dvh - #{styles.$header-height} - #{styles.$footer-height});
+  //   top: 10rem;
+  top: styles.$footer-height/3;
+  clip-path: polygon(0 10%, 100% clamp(20%, 15vw, 80%), 100% 100%, 0 100%);
+
+  &__frame {
+    border: 1px solid red;
+    // position: relative;
+    // z-index: 1;
+    max-width: styles.$g-max-width;
+    width: 100%;
+    height: 100%;
+    // margin: 0 auto;
+    margin-top: 9rem;
+    @include styles.setFlex(
+      $d: column,
+      $jc: space-around,
+      $ai: center,
+      $gap: clamp(2rem, 8vw, 7rem)
+    );
+  }
+
+  &__title {
+    // margin: 0;
+    // flex: 1;
+    align-self: flex-start;
+    @include styles.setFont(
+      $family: (
+        'Syne',
+        sans-serif,
+      ),
+      $size: clamp(3.6rem, 9vw, 8rem),
+      $weight: 800,
+      $line-height: 0.7,
+      $color: inherit
+    );
+
+    &:hover {
+      color: #00bc8f;
+    }
+  }
+
+  &__content {
+    // flex: 1.2;
+    width: 62rem;
+    @include styles.setFlex($d: column, $ai: center, $gap: clamp(1.2rem, 3vw, 2rem));
+  }
+
+  &__headline {
+    // margin: 0;
+    @include styles.setFont($size: clamp(1.4rem, 3vw, 2rem), $weight: 700, $color: #00bc8f);
+  }
+
+  &__subheadline {
+    // margin: 0;
+    @include styles.setFont(
+      $size: clamp(1rem, 2.2vw, 1.4rem),
+      $color: inherit,
+      $weight: 400,
+      //   $line-height: 1.4
+    );
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: clamp(1.5rem, 4vw, 2.5rem);
+    @include styles.setFlex($d: column, $ai: stretch, $gap: clamp(1.4rem, 4vw, 2.4rem));
+  }
+
+  //   &__field {
+  //     @include styles.setFlex($d: column, $ai: flex-start, $gap: 0.8rem);
+  //   }
+
+  //   &__label {
+  //     @include styles.setFont($size: 0.95rem, $weight: 300, $color: inherit);
+  //   }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 0.8rem 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 0.2rem solid #ffffff;
+    outline: none;
+    @include styles.setFont($size: 1rem, $weight: 300, $color: inherit);
+  }
+
+  &__textarea {
+    min-height: 9rem;
+    resize: vertical;
+  }
+
+  &__checkbox {
+    @include styles.setFlex($jc: flex-start, $gap: 0.7rem);
+  }
+
+  &__checkbox-input-container {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include styles.setFlex();
+  }
+
+  &__checkbox-input {
+    appearance: none;
+    background: transparent;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+
+    // &:checked {
+    //   background: #00bc8f;
+    //   border-color: #00bc8f;
+    // }
+  }
+
+  &__checkbox-input-check-icon {
+    position: absolute;
+    // inset: 0;
+    margin: auto;
+    // padding: 0.1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: none;
+    filter: invert(1);
+  }
+
+  &__checkbox-input:checked + &__checkbox-input-check-icon {
+    display: block;
+  }
+
+  &__checkbox-text {
+    @include styles.setFont($size: 0.8em, $weight: 400, $color: inherit, $line-height: 1.5);
+  }
+
+  &__link {
+    display: inline-block;
+    text-align: center;
+    width: 9rem;
+    color: #00bc8f;
+  }
+
+  &__checkbox:hover .contact-me__checkbox-input-container {
+    background: #00bc8f;
+    border-radius: 50%;
+  }
+
+  &__checkbox:hover .contact-me__link {
+    font-weight: 700;
+  }
+
+  &__submit {
+    align-self: center;
+    padding: 1.1rem 3.6rem;
+    border: 0.2rem solid #4d4d4d;
+    background: transparent;
+    @include styles.setFont(
+      $family: (
+        'Syne',
+        sans-serif,
+      ),
+      $size: 1.1rem,
+      $weight: 500,
+      $color: #7a7a7a
+    );
+    cursor: not-allowed;
+  }
+
+  &__jump-top {
+    border: 1px solid red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    // transform: translate(-100%, -100%);
+    width: 5.5rem;
+    height: 8rem;
+    z-index: 1;
+  }
+
+  &__jump-top-icon {
+    filter: invert(1);
+    transform: rotate(-180deg);
+    width: 5.3rem;
+    height: 7.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-me {
+    padding: clamp(9rem, 16vw, 12rem) styles.$g-pad-x clamp(7rem, 12vw, 10rem);
+
+    &__frame {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__scroll {
+      right: styles.$g-pad-x;
+    }
+  }
+}
