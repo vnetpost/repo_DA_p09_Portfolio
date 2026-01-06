@@ -1,4 +1,4 @@
-@mixin setFlex($d: row, $jc: center, $ai: center, $wrap: nowrap, $gap: 0, $display: flex) {
+@mixin setFlex($display: flex, $d: row, $jc: center, $ai: center, $wrap: nowrap, $gap: 0) {
   display: $display;
   flex-direction: $d;
   justify-content: $jc;
@@ -8,7 +8,10 @@
 }
 
 @mixin setFont(
-  $family: ('Overpass', sans-serif),
+  $family: (
+    'Overpass',
+    sans-serif,
+  ),
   $size: 1em,
   $weight: null,
   $line-height: null,

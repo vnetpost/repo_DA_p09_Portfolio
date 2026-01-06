@@ -5,7 +5,7 @@
   padding: clamp(5rem, 8vw, 8rem) styles.$g-pad-x clamp(7rem, 12vw, 11rem);
   max-width: styles.$g-max-width;
   width: 100%;
-  height: 100dvh;
+  // height: 100dvh;
   @include styles.setFont();
 
   &__content {
@@ -27,7 +27,7 @@
     );
 
     &:hover {
-      @include styles.setFont($family: null, $size: null, $color: #00bc8f);
+      color: #00bc8f;
     }
   }
 
@@ -124,9 +124,9 @@
     }
 
     &__body-right {
-      max-width: 100%;
-      align-self: center;
-      margin-left: 0;
+      width: 100%;
+      // align-self: center;
+      // margin-left: 0;
     }
 
     &__text {
@@ -139,6 +139,7 @@
 
     &__cta {
       align-self: center;
+      width: 60%;
     }
   }
 }

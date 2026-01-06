@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { UserDatabankService } from '../../services/userDatabankService/user-databank-service';
 
 type Lang = 'en' | 'de';
 @Component({
@@ -9,6 +10,8 @@ type Lang = 'en' | 'de';
   styleUrl: './header.scss',
 })
 export class Header {
+  userDBS = inject(UserDatabankService);
+
   isMenuOpen = false;
   lang: Lang = 'en';
 

@@ -1,1 +1,44 @@
-<p>portfolio works!</p>
+<section class="portfolio" aria-label="Portfolio">
+  <div class="portfolio__frame">
+    <header class="portfolio__header">
+      <h2 class="portfolio__title" id="portfolio-title">Portfolio</h2>
+      <p class="portfolio__subtitle">
+        Explore a selection of my work here - interact with projects to see my skills in action.
+      </p>
+    </header>
+
+    <div class="portfolio__list">
+      @for (project of userDBS.projectsData; track project.name; let idx = $index) {
+      <article class="portfolio__project" [class.portfolio__project--reverse]="idx % 2 === 1">
+        <figure class="portfolio__media">
+          <img
+            class="portfolio__image"
+            [src]="project.imgPath"
+            [alt]="project.name + ' project preview'"
+          />
+          <span class="portfolio__hover-arrow-box" aria-hidden="true">
+            <img
+              class="portfolio__hover-arrow-icon"
+              src="/assets/img/icons/arrow.svg"
+              alt="Arrow icon"
+            />
+          </span>
+        </figure>
+
+        <div class="portfolio__details">
+          <h3 class="portfolio__name">{{ project.name }}</h3>
+          <p class="portfolio__stack">{{ project.stack }}</p>
+          <p class="portfolio__description">{{ project.description }}</p>
+          <a class="portfolio__link" [href]="project.githubUrl" target="_blank" rel="noreferrer">
+            Github
+          </a>
+        </div>
+
+        <div class="portfolio__counter">
+          <span class="portfolio__counter-value">{{ getCounterLabel(idx) }}</span>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>

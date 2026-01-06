@@ -45,4 +45,31 @@ collaboration.`;
           and help others, with a great sense of humor as well.`,
     },
   ];
+
+  projectsData = [
+    {
+      name: 'Join',
+      imgPath: '/assets/img/projects-photos/join.png',
+      stack: 'Angular | TypeScript | HTML | CSS | Firebase',
+      description:
+        'Task manager inspired by the Kanban system. Create and organize tasks using drag and drop, assign users, and manage categories.',
+      githubUrl: '#',
+    },
+    {
+      name: 'El Pollo Loco',
+      imgPath: '/assets/img/projects-photos/elPolloLoco.png',
+      stack: 'JavaScript | HTML | CSS',
+      description:
+        'Jump, collect items, and defeat enemies in a playful side-scroller game with custom animations and sound effects.',
+      githubUrl: '#',
+    },
+    {
+      name: 'DABubble',
+      imgPath: '/assets/img/projects-photos/da-bubble.png',
+      stack: 'Angular | TypeScript | Firebase',
+      description:
+        'Slack-style team messenger with channels, threads, and emoji reactions for seamless collaboration.',
+      githubUrl: '#',
+    },
+  ];
 }

@@ -1,6 +1,12 @@
 @use '../../../../styles/index' as styles;
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: styles.$bg-color;
+
   &__inner {
     height: styles.$header-height;
     padding: 0 styles.$g-pad-x;
@@ -74,7 +80,7 @@
   &__panel {
     width: 100%;
     max-width: styles.$g-max-width;
-    height: calc(100vh - styles.$header-height);
+    height: calc(100dvh - styles.$header-height);
     // height: 100%;
     margin: 0 auto;
     @include styles.setFlex($d: column, $jc: flex-start, $ai: stretch);
@@ -105,13 +111,11 @@
   &__footer {
     position: relative;
     height: 33vh;
-    background: #000;
-    @include styles.setFont($family: null, $size: null, $style: null, $color: #fff);
-    padding: clamp(2rem, 6vw, 5rem) styles.$g-pad-x;
-    @include styles.setFlex($jc: space-between, $ai: flex-end, $gap: 3rem);
-    overflow: hidden;
-
     clip-path: polygon(0 10%, 100% clamp(20%, 20vw, 70%), 100% 100%, 0 100%);
+    background: #000000;
+    @include styles.setFont($family: null, $size: null, $style: null, $color: #fff);
+    @include styles.setFlex($jc: space-between, $ai: flex-end, $gap: 3rem);
+    padding: clamp(2rem, 6vw, 5rem) styles.$g-pad-x;
   }
 
   &__contact {
@@ -182,5 +186,19 @@
   }
 }
 
-@media (max-width: 768px) {
+@include styles.mobileSmall {
+  .menu-overlay {
+    &__footer {
+      @include styles.setFlex($d: column, $jc: space-between);
+
+      .menu-overlay__contact {
+        align-self: flex-start;
+        top: 30%;
+      }
+
+      .menu-overlay__social-links {
+        // border: 1px solid red;
+      }
+    }
+  }
 }
