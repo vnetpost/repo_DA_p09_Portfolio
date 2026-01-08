@@ -32,5 +32,9 @@ html {
     width: 100%;
     max-width: styles.$g-max-width;
     margin: 0 auto;
+
+    &.menu-overlay-open {
+      // overflow: hidden;
+    }
   }
 }

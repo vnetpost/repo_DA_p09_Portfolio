@@ -1,12 +1,9 @@
 @use '../../../styles/index' as styles;
 
 .about-me {
-  position: relative;
-  padding: clamp(5rem, 8vw, 8rem) styles.$g-pad-x clamp(7rem, 12vw, 11rem);
+  padding: clamp(5rem, 8vw, 8rem) styles.$g-pad-x clamp(5rem, 8vw, 8rem);
   max-width: styles.$g-max-width;
   width: 100%;
-  // height: 100dvh;
-  @include styles.setFont();
 
   &__content {
     @include styles.setFlex($d: column, $ai: flex-start, $gap: clamp(2.5rem, 6vw, 4rem));
@@ -77,17 +74,18 @@
   }
 
   &__cta {
-    @include styles.setFlex($display: flex);
+    @include styles.setFlex();
     width: 17rem;
     padding: 1rem 3rem;
     border: 0.3rem solid #000000;
     text-decoration: none;
     @include styles.setFont($size: 1.6rem, $weight: 400);
     align-self: center;
+    transition: width 200ms ease-in, font-weight 200ms ease-in;
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0.5rem 1.5rem #00000037;
+      width: 20rem;
+      font-weight: 700;
     }
   }
 
@@ -96,12 +94,36 @@
     // width: 100%;
   }
 
+  &__image-wrap {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      transform: translate(#{styles.$g-frame-gap}, #{styles.$g-frame-gap});
+      border: 0.3rem solid #000000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease 0.2s;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
   &__image {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
+  }
+
+  &__separator-link {
+    right: 5%;
+    align-self: flex-end;
   }
 }
 

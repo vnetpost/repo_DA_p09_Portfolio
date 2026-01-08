@@ -1,10 +1,20 @@
 @use '../../../styles/index' as styles;
 
 .skills {
-  padding: styles.$g-pad-x;
+  scroll-margin-top: calc(1.5 * styles.$header-height);
+  padding: 0 styles.$g-pad-x;
   max-width: styles.$g-max-width;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__separator-link {
+    bottom: 0;
+    transform: translate(30%, 30%);
+    z-index: 1;
+    align-self: flex-start;
+  }
 
   &__frame {
     position: relative;
@@ -35,21 +45,32 @@
       $weight: 800,
       $line-height: 0.8
     );
+
+    &:hover {
+      color: #00bc8f;
+    }
   }
 
   &__list {
+    margin-top: clamp(1.5rem, 6vw, 6rem);
     list-style: none;
-    @include styles.setFlex($wrap: wrap, $jc: center);
-    row-gap: clamp(1.5rem, 4vw, 3rem);
-    column-gap: clamp(1.5rem, 6vw, 3rem);
+    @include styles.setFlex($wrap: wrap);
+    row-gap: clamp(1.5rem, 5vw, 7rem);
+    column-gap: clamp(1.5rem, 6vw, 8rem);
   }
 
   &__item {
     @include styles.setFlex($d: column, $gap: 0.8rem);
     flex: 0 0 clamp(9rem, 13vw, 11rem);
+
+    &:hover .skills__icon {
+      animation: spin-horizontal 0.6s ease-in-out;
+    }
   }
 
   &__icon {
+    display: block;
+    transform-style: preserve-3d;
     width: auto;
     height: auto;
     max-width: 60%;

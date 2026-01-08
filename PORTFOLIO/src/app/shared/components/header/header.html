@@ -5,101 +5,68 @@
     </a>
     <div class="header__lang-and-menu" aria-label="Language and menu controls">
       <div class="header__lang-buttons" aria-label="Language selection">
-        <button
-          type="button"
-          class="header__lang-button"
-          (click)="setLang('en')"
-          [class.header__lang-button--active]="lang === 'en'"
-        >
+        <button type="button" class="header__lang-button" (click)="setLang('en')"
+          [class.header__lang-button--active]="lang === 'en'">
           EN
         </button>
 
-        <button
-          type="button"
-          class="header__lang-button"
-          (click)="setLang('de')"
-          [class.header__lang-button--active]="lang === 'de'"
-        >
+        <button type="button" class="header__lang-button" (click)="setLang('de')"
+          [class.header__lang-button--active]="lang === 'de'">
           DE
         </button>
       </div>
 
-      @if (isMenuOpen) {
-      <button
-        type="button"
-        class="header__burger-menu"
-        (click)="closeMenu()"
-        [attr.aria-expanded]="true"
-        aria-controls="mobile-menu"
-        aria-label="Close navigation menu"
-      >
-        <img src="/assets/img/icons/close.png" alt="Close menu icon" />
+      <button type="button" class="header__burger-menu-btn" (click)="toggleMenu()" [class.is-open]="isMenuOpen"
+        [attr.aria-expanded]="isMenuOpen" aria-controls="mobile-menu"
+        [attr.aria-label]="isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'">
+        <span class="header__burger-frames" aria-hidden="true">
+          <img class="frame f1" src="/assets/img/icons/anim-icons/anim-burger/burger1.svg" alt="" />
+          <img class="frame f2" src="/assets/img/icons/anim-icons/anim-burger/burger2.svg" alt="" />
+          <img class="frame f3" src="/assets/img/icons/anim-icons/anim-burger/burger3.svg" alt="" />
+          <img class="frame f4" src="/assets/img/icons/anim-icons/anim-burger/burger4.svg" alt="" />
+          <img class="frame f5" src="/assets/img/icons/anim-icons/anim-burger/burger5.svg" alt="" />
+        </span>
       </button>
-      } @else {
-      <button
-        type="button"
-        class="header__burger-menu"
-        (click)="toggleMenu()"
-        [attr.aria-expanded]="false"
-        aria-controls="mobile-menu"
-        aria-label="Open navigation menu"
-      >
-        <img src="/assets/img/icons/burger.png" alt="Open menu icon" />
-      </button>
-      }
+
+      <!-- src="/assets/img/icons/anim-icons/anim-burger/burger5.svg" -->
     </div>
   </section>
 
   @if (isMenuOpen) {
-  <section
-    id="mobile-menu"
-    class="menu-overlay"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Main navigation menu"
-  >
+  <section id="mobile-menu" class="menu-overlay" role="dialog" aria-modal="true" aria-label="Main navigation menu">
     <div class="menu-overlay__panel">
       <nav class="menu-overlay__nav" aria-label="Main navigation">
-        <a routerLink="/about" (click)="closeMenu()">About me</a>
-        <a routerLink="/skills" (click)="closeMenu()">My skills</a>
-        <a routerLink="/portfolio" (click)="closeMenu()">Portfolio</a>
+        <a class="menu-overlay__nav-link" routerLink="/about" (click)="closeMenu()">
+          <span>About me</span>
+          <div class="menu-overlay__nav-link-anim"></div>
+        </a>
+        <a class="menu-overlay__nav-link" routerLink="/skills" (click)="closeMenu()">
+          <span>My skills</span>
+          <div class="menu-overlay__nav-link-anim"></div>
+        </a>
+        <a class="menu-overlay__nav-link" routerLink="/portfolio" (click)="closeMenu()">
+          <span>Portfolio</span>
+          <div class="menu-overlay__nav-link-anim"></div>
+        </a>
       </nav>
 
-      <section
-        class="menu-overlay__footer"
-        aria-label="footer with Contact information"
-      >
+      <section class="menu-overlay__footer" aria-label="footer with Contact information">
         <div class="menu-overlay__contact">
           <h2>Say hi!</h2>
-          <a class="menu-overlay__mail" href="mailto:info@babak-anvari.com"
-            >{{userDBS.emailAddress}}
+          <a class="menu-overlay__mail" [href]="'mailto:' + userDBS.personalInfo.emailAddress">
+            {{ userDBS.personalInfo.emailAddress }}
           </a>
         </div>
 
         <div class="menu-overlay__social-links">
-          <a href="#" aria-label="GitHub profile">
-            <img class="menu-overlay__icon" src="/assets/img/icons/github.png" alt="GitHub icon" />
-            <img
-              class="menu-overlay__icon menu-overlay__icon--hover"
-              src="/assets/img/icons/github-hover.png"
-              alt="GitHub icon"
-            />
+          <a class="menu-overlay__social-link" href="#" aria-label="GitHub profile">
+            <img class="menu-overlay__icon" src="/assets/img/icons/github.svg" alt="GitHub icon" />
           </a>
-          <a href="#" aria-label="Send email">
-            <img class="menu-overlay__icon" src="/assets/img/icons/mail.png" alt="Mail icon" />
-            <img
-              class="menu-overlay__icon menu-overlay__icon--hover"
-              src="/assets/img/icons/mail-hover.png"
-              alt="Mail icon"
-            />
+          <a class="menu-overlay__social-link" href="#" aria-label="Send email">
+            <img class="menu-overlay__icon" src="/assets/img/icons/mail.svg" alt="Mail icon" />
           </a>
-          <a href="#" aria-label="LinkedIn profile">
-            <img class="menu-overlay__icon" src="/assets/img/icons/linkedIn.png" alt="LinkedIn icon" />
-            <img
-              class="menu-overlay__icon menu-overlay__icon--hover"
-              src="/assets/img/icons/linkedIn-hover.png"
-              alt="LinkedIn icon"
-            />
+          <a class="menu-overlay__social-link" href="#" aria-label="LinkedIn profile">
+            <img class="menu-overlay__icon" src="/assets/img/icons/linkedIn.svg" alt="LinkedIn icon" />
           </a>
         </div>
       </section>

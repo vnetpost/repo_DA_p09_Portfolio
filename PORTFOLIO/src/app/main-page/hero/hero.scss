@@ -2,9 +2,7 @@
 
 .hero {
   height: calc(100vh - styles.$header-height);
-  padding: clamp(2rem, 6vw, 6rem) styles.$g-pad-x;
-  position: relative;
-  overflow: hidden;
+  padding: clamp(2rem, 6vmin, 6rem) styles.$g-pad-x;
   @include styles.setFlex($d: column, $gap: clamp(2rem, 6vw, 4rem));
   @include styles.setFont(
     $family: (
@@ -17,10 +15,9 @@
 
   &__content {
     @include styles.setFlex($d: column);
-    position: absolute;
-    top: 50;
-    transform: translateY(-50%);
-    width: 85%;
+    padding: clamp(2rem, 6vw, 6rem);
+    transform: translateY(30%);
+    animation: hero-title 360ms ease-in-out 360ms forwards;
   }
 
   &__title-group {
@@ -36,13 +33,10 @@
       ),
       $size: clamp(2rem, 9vw, 12.5rem),
       $weight: 800,
-      $line-height: 0.8,
+      $line-height: 0.7,
       $letter-spacing: -0.02em
     );
     animation: hero-rise 650ms ease-out;
-  }
-
-  &__title-line {
   }
 
   &__down {
@@ -83,10 +77,11 @@
   &__scroll {
     position: absolute;
     right: styles.$g-pad-x;
-    bottom: clamp(4rem, 10vw, 8rem);
+    bottom: clamp(4rem, 10vmin, 8rem);
     @include styles.setFlex($d: column, $jc: space-between);
     width: 5rem;
     height: 20rem;
+    height: clamp(13rem, 10vmin, 20rem);
   }
 
   &__arrow-wrapper {
@@ -96,50 +91,15 @@
     @include styles.setFlex();
   }
 
-  &__arrow {
+  &__arrow-icon {
     flex: 1;
     width: 100%;
-    opacity: 1;
-    animation: arrow-fall 1.3s ease-out infinite;
+    animation: arrow-fall 1.5s ease-out infinite;
   }
 
   &__scroll-text {
     margin-bottom: 0;
     @include styles.setFont($weight: 300);
     text-align: center;
-  }
-}
-
-@keyframes hero-rise {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes arrow-fall {
-  0% {
-    opacity: 0;
-    transform: translateY(-15rem);
-  }
-  25% {
-    opacity: 1;
-    transform: translateY(-10rem);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-5rem);
-  }
-  75% {
-    opacity: 1;
-    transform: translateY(10rem);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(15rem);
   }
 }

@@ -7,16 +7,18 @@
       </h1>
       <div class="hero__down">
         <span class="hero__line" aria-hidden="true"></span>
-        <span class="hero__name">Babak Anvari</span>
+        <span class="hero__name">{{ userDBS.personalInfo.name }}</span>
       </div>
     </div>
   </div>
 
-  <a class="hero__email" href="mailto:info@babak-anvari.com">info@babak-anvari.com</a>
+  <a class="hero__email" [href]="'mailto:' + userDBS.personalInfo.emailAddress">
+    {{ userDBS.personalInfo.emailAddress }}
+  </a>
 
   <div class="hero__scroll" aria-hidden="true">
     <div class="hero__arrow-wrapper">
-      <img class="hero__arrow" src="/assets/img/icons/arrow.svg" alt="arrow icon" />
+      <img class="hero__arrow-icon" src="/assets/img/icons/arrow.svg" alt="arrow icon" />
     </div>
     <span class="hero__scroll-text">Scroll Down</span>
   </div>

@@ -1,7 +1,16 @@
 @use '../../../styles/index' as styles;
 
 .references {
-  padding: clamp(5rem, 9vw, 8rem) styles.$g-pad-x clamp(6rem, 10vw, 9rem);
+  padding: clamp(4rem, 7vw, 6rem) styles.$g-pad-x;
+  @include styles.setFlex($d: column);
+
+  &__separator-link {
+    position: absolute;
+    bottom: 0;
+    transform: translate(-20%, 80%);
+    z-index: 1;
+    align-self: flex-end;
+  }
 
   &__frame {
     max-width: styles.$g-max-width;

@@ -45,30 +45,19 @@
   }
 
   &__social-links {
-    @include styles.setFlex($gap: clamp(1rem, 3vw, 1.6rem));
+    // @include styles.setFlex($gap: clamp(4rem, 3vw, 5rem));
+    @include styles.setFlex($gap: 4.5rem);
 
     a {
       @include styles.setFlex();
       text-decoration: none;
 
       .footer__icon {
-        width: 4rem;
+        width: 2.5rem;
+        transition: transform 360ms ease;
 
-        &--hover {
-          position: absolute;
-          inset: 0;
-          opacity: 0;
-          transition: opacity 160ms ease;
-        }
-      }
-
-      &:hover {
-        .footer__icon--hover {
-          opacity: 1;
-        }
-
-        .footer__icon:not(.footer__icon--hover) {
-          opacity: 0;
+        &:hover {
+          transform: translateY(-40%);
         }
       }
     }
@@ -79,12 +68,11 @@
     @include styles.setFont($size: 0.9em, $weight: 400, $color: #ffffff);
   }
 
-  // @media (max-width: 700px) {
   @media (max-width: 768px) {
-    height: 32rem;
+    height: 25rem;
 
     &__inner {
-      @include styles.setFlex($d: column, $ai: center, $gap: 1.7rem);
+      @include styles.setFlex($d: column, $gap: 1.7rem);
       text-align: center;
     }
 

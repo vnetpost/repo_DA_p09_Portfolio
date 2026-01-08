@@ -4,6 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UserDatabankService {
+  personalInfo = {
+    name: 'Babake Anvari',
+    address: 'Heimburgstr. 3',
+    city: 'Nuremberg',
+    emailAddress: 'info@babak-anvari.com',
+    currentYear: new Date().getFullYear(),
+  };
+
   skillsList = [
     { name: 'Angular', imgPath: '/assets/img/icons/skills-icons/angular.svg' },
     { name: 'TypeScript', imgPath: '/assets/img/icons/skills-icons/ts.svg' },
@@ -14,8 +22,6 @@ export class UserDatabankService {
     { name: 'Git', imgPath: '/assets/img/icons/skills-icons/git.svg' },
     { name: 'REST-API', imgPath: '/assets/img/icons/skills-icons/api.svg' },
   ];
-
-  emailAddress: string = 'info@babak-anvari.com';
 
   aboutMeText: string = `Write some information about yourself that is IT related. <br />
 Why are you passionate about coding? Show a desire to learn new technologies and add a
@@ -72,4 +78,11 @@ collaboration.`;
       githubUrl: '#',
     },
   ];
+
+  contactFormData = {
+    name: '',
+    email: '',
+    msg: '',
+    privacy: false,
+  };
 }
