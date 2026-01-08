@@ -11,17 +11,9 @@
       @for (project of userDBS.projectsData; track project.name; let idx = $index) {
       <article class="portfolio__project" [class.portfolio__project--reverse]="idx % 2 === 1">
         <figure class="portfolio__media">
-          <img
-            class="portfolio__image"
-            [src]="project.imgPath"
-            [alt]="project.name + ' project preview'"
-          />
+          <img class="portfolio__image" [src]="project.imgPath" [alt]="project.name + ' project preview'" />
           <span class="portfolio__hover-arrow-box" aria-hidden="true">
-            <img
-              class="portfolio__hover-arrow-icon"
-              src="/assets/img/icons/arrow.svg"
-              alt="Arrow icon"
-            />
+            <img class="portfolio__hover-arrow-icon" src="/assets/img/icons/arrow.svg" alt="Arrow icon" />
           </span>
         </figure>
 

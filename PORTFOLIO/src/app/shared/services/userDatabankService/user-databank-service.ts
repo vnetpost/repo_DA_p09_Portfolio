@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserDatabankService {
   personalInfo = {
-    name: 'Babake Anvari',
+    name: 'Babak Anvari',
     address: 'Heimburgstr. 3',
     city: 'Nuremberg',
     emailAddress: 'info@babak-anvari.com',
@@ -67,7 +67,7 @@ collaboration.`;
       stack: 'JavaScript | HTML | CSS',
       description:
         'Jump, collect items, and defeat enemies in a playful side-scroller game with custom animations and sound effects.',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/vnetpost/repo_DA_p08_El_Pollo_Loco.git',
     },
     {
       name: 'DABubble',
