@@ -36,15 +36,15 @@
   <section id="mobile-menu" class="menu-overlay" role="dialog" aria-modal="true" aria-label="Main navigation menu">
     <div class="menu-overlay__panel">
       <nav class="menu-overlay__nav" aria-label="Main navigation">
-        <a class="menu-overlay__nav-link" routerLink="/about" (click)="closeMenu()">
+        <a class="menu-overlay__nav-link" [routerLink]="['/']" fragment="about" (click)="closeMenu()">
           <span>About me</span>
           <div class="menu-overlay__nav-link-anim"></div>
         </a>
-        <a class="menu-overlay__nav-link" routerLink="/skills" (click)="closeMenu()">
+        <a class="menu-overlay__nav-link" [routerLink]="['/']" fragment="skills" (click)="closeMenu()">
           <span>My skills</span>
           <div class="menu-overlay__nav-link-anim"></div>
         </a>
-        <a class="menu-overlay__nav-link" routerLink="/portfolio" (click)="closeMenu()">
+        <a class="menu-overlay__nav-link" [routerLink]="['/']" fragment="portfolio" (click)="closeMenu()">
           <span>Portfolio</span>
           <div class="menu-overlay__nav-link-anim"></div>
         </a>

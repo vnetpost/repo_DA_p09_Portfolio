@@ -1,18 +1,15 @@
 @use '../../../styles/index' as styles;
 
 .skills {
-  scroll-margin-top: calc(1.5 * styles.$header-height);
-  padding: 0 styles.$g-pad-x;
+  scroll-margin-top: calc(-2 * styles.$header-height);
+  padding: 0 styles.$g-pad-x clamp(7rem, 9vw, 8.5rem);
   max-width: styles.$g-max-width;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  @include styles.setFlex($d: column, $gap: clamp(1rem, 3vw, 2rem));
 
   &__separator-link {
-    bottom: 0;
-    transform: translate(30%, 30%);
-    z-index: 1;
+    left: 5%;
     align-self: flex-start;
   }
 

@@ -17,6 +17,7 @@ a {
 
 html {
   @include styles.setFont($size: 10px);
+  scroll-padding-top: styles.$header-height;
 
   > body {
     @include styles.setFont($size: 16px, $weight: 400);

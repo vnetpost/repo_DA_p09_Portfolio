@@ -1,6 +1,7 @@
 @use '../../../styles/index' as styles;
 
 .about-me {
+  scroll-margin-top: styles.$header-height;
   padding: clamp(5rem, 8vw, 8rem) styles.$g-pad-x clamp(5rem, 8vw, 8rem);
   max-width: styles.$g-max-width;
   width: 100%;
