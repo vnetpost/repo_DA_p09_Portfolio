@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { UserDatabankService } from '../../shared/services/userDatabankService/user-databank-service';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })

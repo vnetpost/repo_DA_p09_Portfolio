@@ -1,0 +1,164 @@
+{
+  "POLICY": {
+    "TITLE": "Datenschutzerklärung",
+    "BACK_ARIA": "Zur Hauptseite",
+    "BACK_ICON_ALT": "Pfeil nach links",
+    "SECTION_1_TITLE": "Untertitel",
+    "SECTION_1_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo.",
+    "SECTION_2_TITLE": "Untertitel",
+    "SECTION_2_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
+  },
+  "LEGAL": {
+    "TITLE": "Rechtlicher Hinweis",
+    "BACK_ARIA": "Zur Hauptseite",
+    "BACK_ICON_ALT": "Pfeil nach links",
+    "IMPRINT_TITLE": "Impressum",
+    "BOARD_TITLE": "Kontakt",
+    "BOARD_EMAIL": "E-Mail: {{email}}",
+    "TERMS_TITLE": "Annahme der Bedingungen",
+    "TERMS_P1_START": "Durch den Zugriff auf und die Nutzung von\u0020",
+    "TERMS_P1_END": "\u0020(Produkt) erkennen Sie die folgenden Bedingungen sowie etwaige Richtlinien, Leitlinien oder Änderungen an, die Ihnen von Zeit zu Zeit vorgelegt werden. Wir, die aufgeführten Studierenden, können die Bedingungen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern.",
+    "SCOPE_TITLE": "Geltungsbereich und Eigentum des Produkts",
+    "SCOPE_P1_AFTER_PRODUCT": "\u0020wurde im Rahmen eines studentischen Gruppenprojekts in einem Web-Development-Bootcamp an der\u0020",
+    "SCOPE_P1_AFTER_COMPANY": ". Es dient Ausbildungszwecken und ist nicht für umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine durchgängige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsmerkmale dieses Produkts garantieren.",
+    "SCOPE_P2_START": "Das Design von\u0020",
+    "SCOPE_P2_MIDDLE": "\u0020ist Eigentum der\u0020",
+    "SCOPE_P2_END": ". Unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Reproduktion des Designs ist strikt untersagt.",
+    "RIGHTS_TITLE": "Eigentumsrechte",
+    "RIGHTS_P1_START": "Abgesehen vom Design im Eigentum der\u0020",
+    "RIGHTS_P1_MIDDLE": ", behalten wir, die aufgeführten Studierenden, alle Eigentumsrechte an\u0020",
+    "RIGHTS_P1_END": ", einschließlich aller zugehörigen urheberrechtlich geschützten Materialien, Marken und sonstigen proprietären Informationen.",
+    "USE_TITLE": "Nutzung des Produkts",
+    "USE_P1_AFTER_PRODUCT_1": "\u0020darf nur zu rechtmäßigen Zwecken und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften verwendet werden. Jede Nutzung von\u0020",
+    "USE_P1_AFTER_PRODUCT_2": "\u0020für illegale Aktivitäten oder um eine andere Person zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strikt untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von\u0020",
+    "USE_P1_AFTER_PRODUCT_3": ".",
+    "DISCLAIMER_TITLE": "Haftungsausschluss und Haftungsbeschränkung",
+    "DISCLAIMER_P1_AFTER_PRODUCT": "\u0020wird \"wie besehen\" ohne Gewährleistung jeglicher Art bereitgestellt, weder ausdrücklich noch stillschweigend, einschließlich, aber nicht beschränkt auf die stillschweigenden Garantien der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung. In keinem Fall haften wir, die aufgeführten Studierenden, oder die\u0020",
+    "DISCLAIMER_P1_AFTER_COMPANY": ", für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden durch entgangenen Gewinn, Goodwill, Nutzung, Daten oder andere immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die aus der Nutzung oder Leistung von\u0020",
+    "DISCLAIMER_P1_END": ".",
+    "INDEMNITY_TITLE": "Freistellung",
+    "INDEMNITY_P1_START": "Sie verpflichten sich, uns, die aufgeführten Studierenden, die\u0020",
+    "INDEMNITY_P1_MIDDLE": ", sowie unsere verbundenen Unternehmen, Partner, Beauftragten, Geschäftsführer, Direktoren, Agenten und Mitarbeiter, von und gegen jegliche Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltsgebühren) freizustellen, die aus Ihrer Nutzung von\u0020",
+    "INDEMNITY_P1_END": "\u0020und/oder Ihrem Verstoß gegen diesen Rechtshinweis entstehen.",
+    "CONTACT_TEXT": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter {{email}}.",
+    "DATE_TEXT": "Datum: 26. Juli 2025"
+  },
+  "HEADER": {
+    "LOGO_ARIA": "Zur Startseite",
+    "LOGO_ALT": "Logo",
+    "CONTROLS_ARIA": "Sprach- und Menüsteuerung",
+    "LANG_SELECTION_ARIA": "Sprachauswahl",
+    "BURGER_OPEN_ARIA": "Navigationsmenü öffnen",
+    "BURGER_CLOSE_ARIA": "Navigationsmenü schließen",
+    "MENU_ARIA": "Hauptmenü",
+    "NAV_ARIA": "Hauptnavigation",
+    "NAV_ABOUT": "Über mich",
+    "NAV_SKILLS": "Meine Skills",
+    "NAV_PORTFOLIO": "Portfolio",
+    "FOOTER_ARIA": "Footer mit Kontaktinformationen",
+    "CONTACT_TITLE": "Sag hallo!",
+    "SOCIAL_GITHUB_ARIA": "GitHub-Profil",
+    "SOCIAL_GITHUB_ALT": "GitHub-Icon",
+    "SOCIAL_MAIL_ARIA": "E-Mail senden",
+    "SOCIAL_MAIL_ALT": "Mail-Icon",
+    "SOCIAL_LINKEDIN_ARIA": "LinkedIn-Profil",
+    "SOCIAL_LINKEDIN_ALT": "LinkedIn-Icon"
+  },
+  "HERO": {
+    "ARIA_LABEL": "Einleitung",
+    "TITLE_FRONTEND": "Frontend",
+    "TITLE_DEVELOPER": "Entwickler",
+    "SCROLL_TEXT": "Nach unten scrollen",
+    "ARROW_ALT": "Pfeil-Icon"
+  },
+  "ABOUT": {
+    "ARIA_LABEL": "Über mich",
+    "TITLE": "Über mich",
+    "DESCRIPTION_LINE_1": "Schreibe einige Informationen über dich, die IT-bezogen sind.",
+    "DESCRIPTION_LINE_2": "Warum begeistert dich das Programmieren? Zeige Lernbereitschaft für neue Technologien und gib eine kurze Beschreibung deines Problemlösungsansatzes.",
+    "DESCRIPTION_LINE_3": "Du kannst einige Eigenschaften nennen, z. B. analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit.",
+    "HOUSE_ICON_ALT": "Haus-Icon",
+    "LAPTOP_ICON_ALT": "Laptop-Icon",
+    "HIGHLIGHT_LOCATION": "Wohnhaft in Nürnberg",
+    "HIGHLIGHT_REMOTE": "Offen für Remote-Arbeit",
+    "CTA": "Lass uns sprechen",
+    "PORTRAIT_ALT": "Porträtfoto",
+    "SEPARATOR_ARIA": "Zum Skills-Bereich"
+  },
+  "SKILLS": {
+    "TITLE": "Meine Skills",
+    "CTA_ICON_ALT": "Icon für kontinuierliches Lernen",
+    "CTA_TEXT_START": "Du findest den Skill nicht, den du brauchst?",
+    "CTA_LINK": "Kontaktiere mich",
+    "CTA_TEXT_END": "Ich lerne immer gerne dazu!",
+    "SEPARATOR_ARIA": "Zum Portfolio-Bereich"
+  },
+  "PORTFOLIO": {
+    "ARIA_LABEL": "Portfolio",
+    "TITLE": "Portfolio",
+    "SUBTITLE": "Entdecke eine Auswahl meiner Arbeiten – interagiere mit Projekten, um meine Skills in Aktion zu sehen.",
+    "ARROW_ALT": "Pfeil-Icon",
+    "GITHUB_LINK": "GitHub",
+    "PROJECTS": {
+      "JOIN": {
+        "DESCRIPTION": "Auf Kanban basierender Aufgabenmanager. Aufgaben per Drag-and-drop erstellen und organisieren, Nutzer zuweisen und Kategorien verwalten."
+      },
+      "EL_POLLO_LOCO": {
+        "DESCRIPTION": "Springe, sammle Items und besiege Gegner in einem verspielten Side-Scroller mit eigenen Animationen und Soundeffekten."
+      },
+      "DA_BUBBLE": {
+        "DESCRIPTION": "Slack-ähnlicher Team-Messenger mit Channels, Threads und Emoji-Reactions für nahtlose Zusammenarbeit."
+      }
+    }
+  },
+  "REFERENCES": {
+    "TITLE": "Referenzen",
+    "INTRO": "Ich arbeite sowohl selbstständig als auch im Team. Das sagen Kolleginnen und Kollegen über die Zusammenarbeit mit mir.",
+    "QUOTE_ALT": "Zitat-Icon",
+    "SEPARATOR_ARIA": "Zum Kontaktbereich",
+    "LIST": {
+      "USER_1": {
+        "ROLE": "Team-Partner",
+        "TEXT": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen."
+      },
+      "USER_2": {
+        "ROLE": "Team-Partner",
+        "TEXT": "Michi war ein Top-Teamkollege bei der DA. Sein positives Engagement und seine Bereitschaft, Verantwortung zu übernehmen, haben maßgeblich dazu beigetragen, dass wir unsere Ziele erreicht haben."
+      },
+      "USER_3": {
+        "ROLE": "Frontend-Entwickler",
+        "TEXT": "Es war eine große Freude, mit Michael zu arbeiten. Er weiß, wie man Teammitglieder motiviert und ermutigt, die bestmögliche Arbeit zu präsentieren, und bringt stets neue Ideen ins Brainstorming ein. Was das Wohlbefinden der Gruppenmitglieder betrifft, war er immer präsent, ansprechbar und hilfsbereit – mit einem tollen Sinn für Humor."
+      }
+    }
+  },
+  "CONTACT": {
+    "ARIA_LABEL": "Kontakt",
+    "TITLE": "Sag Hallo!",
+    "HEADLINE": "Möchtest du ein neues Projekt besprechen?",
+    "SUBHEADLINE": "Sag Hallo! Lass uns über deine Ideen sprechen und sie umsetzen.",
+    "LABEL_NAME": "Dein Name",
+    "LABEL_EMAIL": "Deine E-Mail",
+    "LABEL_MESSAGE": "Deine Nachricht",
+    "ERROR_NAME": "Dein Name ist erforderlich",
+    "ERROR_EMAIL": "Eine gültige E-Mail ist erforderlich",
+    "ERROR_MESSAGE": "Deine Nachricht ist leer",
+    "ERROR_PRIVACY": "Bitte akzeptiere die Datenschutzbestimmungen.",
+    "CHECK_ICON_ALT": "Haken-Icon",
+    "PRIVACY_TEXT_START": "Ich habe die",
+    "PRIVACY_LINK": "Datenschutzerklärung",
+    "PRIVACY_TEXT_END": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "SUBMIT": "Nachricht senden"
+  },
+  "FOOTER": {
+    "LOGO_ARIA": "Zur Startseite",
+    "LOGO_ALT": "Logo",
+    "SOCIAL_ARIA": "Social Links",
+    "SOCIAL_GITHUB_ARIA": "GitHub-Profil",
+    "SOCIAL_GITHUB_ALT": "GitHub-Icon",
+    "SOCIAL_MAIL_ARIA": "E-Mail senden",
+    "SOCIAL_MAIL_ALT": "Mail-Icon",
+    "SOCIAL_LINKEDIN_ARIA": "LinkedIn-Profil",
+    "SOCIAL_LINKEDIN_ALT": "LinkedIn-Icon",
+    "LEGAL_NOTICE": "Impressum"
+  }
+}

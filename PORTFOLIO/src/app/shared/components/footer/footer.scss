@@ -45,7 +45,6 @@
   }
 
   &__social-links {
-    // @include styles.setFlex($gap: clamp(4rem, 3vw, 5rem));
     @include styles.setFlex($gap: 4.5rem);
 
     a {

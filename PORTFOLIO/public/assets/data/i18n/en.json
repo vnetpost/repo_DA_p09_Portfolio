@@ -1,0 +1,164 @@
+{
+  "POLICY": {
+    "TITLE": "Privacy Policy",
+    "BACK_ARIA": "Back to main page",
+    "BACK_ICON_ALT": "Arrow Right to Links",
+    "SECTION_1_TITLE": "Subtitle",
+    "SECTION_1_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo.",
+    "SECTION_2_TITLE": "Subtitle",
+    "SECTION_2_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
+  },
+  "LEGAL": {
+    "TITLE": "Legal Notice",
+    "BACK_ARIA": "Back to main page",
+    "BACK_ICON_ALT": "Arrow Right to Links",
+    "IMPRINT_TITLE": "Imprint",
+    "BOARD_TITLE": "Exploring the Board",
+    "BOARD_EMAIL": "Email: {{email}}",
+    "TERMS_TITLE": "Acceptance of terms",
+    "TERMS_P1_START": "By accessing and using\u0020",
+    "TERMS_P1_END": "\u0020(Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
+    "SCOPE_TITLE": "Scope and ownership of the product",
+    "SCOPE_P1_AFTER_PRODUCT": "\u0020has been developed as part of a student group project in a web development bootcamp at the\u0020",
+    "SCOPE_P1_AFTER_COMPANY": ". It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+    "SCOPE_P2_START": "The design of\u0020",
+    "SCOPE_P2_MIDDLE": "\u0020is owned by the\u0020",
+    "SCOPE_P2_END": ". Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+    "RIGHTS_TITLE": "Proprietary rights",
+    "RIGHTS_P1_START": "Aside from the design owned by\u0020",
+    "RIGHTS_P1_MIDDLE": ", we, the listed students, retain all proprietary rights in\u0020",
+    "RIGHTS_P1_END": ", including any associated copyrighted material, trademarks, and other proprietary information.",
+    "USE_TITLE": "Use of the product",
+    "USE_P1_AFTER_PRODUCT_1": "\u0020is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of\u0020",
+    "USE_P1_AFTER_PRODUCT_2": "\u0020for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of\u0020",
+    "USE_P1_AFTER_PRODUCT_3": ".",
+    "DISCLAIMER_TITLE": "Disclaimer of warranties and limitation of liability",
+    "DISCLAIMER_P1_AFTER_PRODUCT": "\u0020is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the\u0020",
+    "DISCLAIMER_P1_AFTER_COMPANY": ", be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of\u0020",
+    "DISCLAIMER_P1_END": ".",
+    "INDEMNITY_TITLE": "Indemnity",
+    "INDEMNITY_P1_START": "You agree to indemnify, defend and hold harmless us, the listed students, the\u0020",
+    "INDEMNITY_P1_MIDDLE": ", and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of\u0020",
+    "INDEMNITY_P1_END": "\u0020and/or your breach of this Legal Notice.",
+    "CONTACT_TEXT": "For any questions or notices, please contact us at {{email}}.",
+    "DATE_TEXT": "Date: July 26, 2025"
+  },
+  "HEADER": {
+    "LOGO_ARIA": "Go to homepage",
+    "LOGO_ALT": "Logo",
+    "CONTROLS_ARIA": "Language and menu controls",
+    "LANG_SELECTION_ARIA": "Language selection",
+    "BURGER_OPEN_ARIA": "Open navigation menu",
+    "BURGER_CLOSE_ARIA": "Close navigation menu",
+    "MENU_ARIA": "Main navigation menu",
+    "NAV_ARIA": "Main navigation",
+    "NAV_ABOUT": "About me",
+    "NAV_SKILLS": "My skills",
+    "NAV_PORTFOLIO": "Portfolio",
+    "FOOTER_ARIA": "Footer with contact information",
+    "CONTACT_TITLE": "Say hi!",
+    "SOCIAL_GITHUB_ARIA": "GitHub profile",
+    "SOCIAL_GITHUB_ALT": "GitHub icon",
+    "SOCIAL_MAIL_ARIA": "Send email",
+    "SOCIAL_MAIL_ALT": "Mail icon",
+    "SOCIAL_LINKEDIN_ARIA": "LinkedIn profile",
+    "SOCIAL_LINKEDIN_ALT": "LinkedIn icon"
+  },
+  "HERO": {
+    "ARIA_LABEL": "Intro",
+    "TITLE_FRONTEND": "Frontend",
+    "TITLE_DEVELOPER": "Developer",
+    "SCROLL_TEXT": "Scroll Down",
+    "ARROW_ALT": "Arrow icon"
+  },
+  "ABOUT": {
+    "ARIA_LABEL": "About me",
+    "TITLE": "About me",
+    "DESCRIPTION_LINE_1": "Write some information about yourself that is IT related.",
+    "DESCRIPTION_LINE_2": "Why are you passionate about coding? Show a desire to learn new technologies and add a brief description of your problem-solving approach.",
+    "DESCRIPTION_LINE_3": "You can include some key traits like: analytical thinking, creativity, persistence and collaboration.",
+    "HOUSE_ICON_ALT": "House icon",
+    "LAPTOP_ICON_ALT": "Laptop icon",
+    "HIGHLIGHT_LOCATION": "Based in Nuremberg",
+    "HIGHLIGHT_REMOTE": "Open to work Remote",
+    "CTA": "Let's talk",
+    "PORTRAIT_ALT": "Portrait photo",
+    "SEPARATOR_ARIA": "Go to skills section"
+  },
+  "SKILLS": {
+    "TITLE": "My skills",
+    "CTA_ICON_ALT": "Continued learning icon",
+    "CTA_TEXT_START": "Don't see the skill you need?",
+    "CTA_LINK": "Contact me",
+    "CTA_TEXT_END": "I'm always ready to learn!",
+    "SEPARATOR_ARIA": "Go to portfolio section"
+  },
+  "PORTFOLIO": {
+    "ARIA_LABEL": "Portfolio",
+    "TITLE": "Portfolio",
+    "SUBTITLE": "Explore a selection of my work here - interact with projects to see my skills in action.",
+    "ARROW_ALT": "Arrow icon",
+    "GITHUB_LINK": "GitHub",
+    "PROJECTS": {
+      "JOIN": {
+        "DESCRIPTION": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop, assign users, and manage categories."
+      },
+      "EL_POLLO_LOCO": {
+        "DESCRIPTION": "Jump, collect items, and defeat enemies in a playful side-scroller game with custom animations and sound effects."
+      },
+      "DA_BUBBLE": {
+        "DESCRIPTION": "Slack-style team messenger with channels, threads, and emoji reactions for seamless collaboration."
+      }
+    }
+  },
+  "REFERENCES": {
+    "TITLE": "References",
+    "INTRO": "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.",
+    "QUOTE_ALT": "Quote icon",
+    "SEPARATOR_ARIA": "Go to contact section",
+    "LIST": {
+      "USER_1": {
+        "ROLE": "Team Partner",
+        "TEXT": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+      },
+      "USER_2": {
+        "ROLE": "Team Partner",
+        "TEXT": "Michi was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals."
+      },
+      "USER_3": {
+        "ROLE": "Frontend Engineer",
+        "TEXT": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+      }
+    }
+  },
+  "CONTACT": {
+    "ARIA_LABEL": "Contact me",
+    "TITLE": "Say Hi!",
+    "HEADLINE": "Want to discuss a new project?",
+    "SUBHEADLINE": "Say hello! let's discuss your ideas and make it happen",
+    "LABEL_NAME": "Your name",
+    "LABEL_EMAIL": "Your email",
+    "LABEL_MESSAGE": "Your message",
+    "ERROR_NAME": "Your name is required",
+    "ERROR_EMAIL": "Your valid email is required",
+    "ERROR_MESSAGE": "Your message is empty",
+    "ERROR_PRIVACY": "Please accept the privacy policy.",
+    "CHECK_ICON_ALT": "Check icon",
+    "PRIVACY_TEXT_START": "I have read the",
+    "PRIVACY_LINK": "privacy policy",
+    "PRIVACY_TEXT_END": "and agree to the processing of my data as outlined.",
+    "SUBMIT": "Send message"
+  },
+  "FOOTER": {
+    "LOGO_ARIA": "Go to homepage",
+    "LOGO_ALT": "Logo",
+    "SOCIAL_ARIA": "Social links",
+    "SOCIAL_GITHUB_ARIA": "GitHub profile",
+    "SOCIAL_GITHUB_ALT": "GitHub icon",
+    "SOCIAL_MAIL_ARIA": "Send email",
+    "SOCIAL_MAIL_ALT": "Mail icon",
+    "SOCIAL_LINKEDIN_ARIA": "LinkedIn profile",
+    "SOCIAL_LINKEDIN_ALT": "LinkedIn icon",
+    "LEGAL_NOTICE": "Legal notice"
+  }
+}

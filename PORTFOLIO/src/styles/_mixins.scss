@@ -17,7 +17,8 @@
   $line-height: null,
   $letter-spacing: null,
   $style: normal,
-  $color: #000000
+  $color: #000000,
+  $hyphens: auto
 ) {
   font-family: $family;
   font-size: $size;
@@ -26,4 +27,5 @@
   letter-spacing: $letter-spacing;
   font-style: $style;
   color: $color;
+  hyphens: $hyphens;
 }

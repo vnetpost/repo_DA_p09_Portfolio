@@ -1,10 +1,10 @@
-<section class="contact-me" id="contact" aria-label="Contact me">
+<section class="contact-me" id="contact" [attr.aria-label]="'CONTACT.ARIA_LABEL' | translate">
   <div class="contact-me__frame">
-    <h2 class="contact-me__title" id="contact-title">Say Hi!</h2>
+    <h2 class="contact-me__title" id="contact-title">{{ 'CONTACT.TITLE' | translate }}</h2>
 
     <div class="contact-me__content">
-      <p class="contact-me__headline">Want to discuss a new project?</p>
-      <p class="contact-me__subheadline">Say hello! let's discuss your ideas and make it happen</p>
+      <p class="contact-me__headline">{{ 'CONTACT.HEADLINE' | translate }}</p>
+      <p class="contact-me__subheadline">{{ 'CONTACT.SUBHEADLINE' | translate }}</p>
 
       <form class="contact-me__form" aria-labelledby="contact-title" #contactForm="ngForm"
         (ngSubmit)="onSubmit(contactForm)">
@@ -12,11 +12,11 @@
           <div class="contact-me__input-box">
             <input class="contact-me__input" type="text" name="name" id="contact-name" placeholder=" " required
               #nameModel="ngModel" [(ngModel)]="formData.name" />
-            <label class="contact-me__label" for="contact-name">Your name</label>
+            <label class="contact-me__label" for="contact-name">{{ 'CONTACT.LABEL_NAME' | translate }}</label>
             <span class="contact-me__status-icon-container" aria-hidden="true"></span>
           </div>
           @if(nameModel.invalid && nameModel.touched){
-          <p class="contact-me__input-error">Your name is required</p>
+          <p class="contact-me__input-error">{{ 'CONTACT.ERROR_NAME' | translate }}</p>
           }
         </div>
 
@@ -25,12 +25,12 @@
             <input class="contact-me__input" type="email" name="email" id="contact-email" placeholder=" " required
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #emailModel="ngModel"
               [(ngModel)]="formData.email" />
-            <label class="contact-me__label" for="contact-email">Your email</label>
+            <label class="contact-me__label" for="contact-email">{{ 'CONTACT.LABEL_EMAIL' | translate }}</label>
             <span class="contact-me__status-icon-container" aria-hidden="true"></span>
           </div>
           @if(emailModel.invalid && (emailModel.dirty || emailModel.touched ||
           contactForm.submitted)){
-          <p class="contact-me__input-error">Your valid email is required</p>
+          <p class="contact-me__input-error">{{ 'CONTACT.ERROR_EMAIL' | translate }}</p>
           }
         </div>
 
@@ -38,11 +38,11 @@
           <div class="contact-me__input-box">
             <textarea class="contact-me__textarea" name="message" id="contact-message" rows="" required
               #msgModel="ngModel" [(ngModel)]="formData.msg" placeholder=" "></textarea>
-            <label class="contact-me__label" for="contact-message">Your message</label>
+            <label class="contact-me__label" for="contact-message">{{ 'CONTACT.LABEL_MESSAGE' | translate }}</label>
             <span class="contact-me__status-icon-container" aria-hidden="true"></span>
           </div>
           @if(msgModel.invalid && msgModel.touched){
-          <p class="contact-me__input-error">Your message is empty</p>
+          <p class="contact-me__input-error">{{ 'CONTACT.ERROR_MESSAGE' | translate }}</p>
           }
         </div>
 
@@ -51,23 +51,24 @@
             <div class="contact-me__checkbox-input-container">
               <input class="contact-me__checkbox-input" type="checkbox" name="privacy" required #privacyModel="ngModel"
                 [(ngModel)]="formData.privacy" />
-              <img class="contact-me__checkbox-input-check-icon" src="/assets/img/icons/check.svg" alt="check icon" />
+              <img class="contact-me__checkbox-input-check-icon" src="/assets/img/icons/check.svg"
+                [attr.alt]="'CONTACT.CHECK_ICON_ALT' | translate" />
             </div>
             <span class="contact-me__checkbox-text">
-              I have read the
-              <a class="contact-me__link" routerLink="/privacy-policy">privacy policy</a>
-              and agree to the processing of my data as outlined.
+              {{ 'CONTACT.PRIVACY_TEXT_START' | translate }}
+              <a class="contact-me__link" routerLink="/privacy-policy">{{ 'CONTACT.PRIVACY_LINK' | translate }}</a>
+              {{ 'CONTACT.PRIVACY_TEXT_END' | translate }}
             </span>
           </div>
           @if(nameModel.valid && emailModel.valid && msgModel.valid && privacyModel.invalid &&
           contactForm.submitted){
-          <p class="contact-me__input-error">Please accept the privacy policy.</p>
+          <p class="contact-me__input-error">{{ 'CONTACT.ERROR_PRIVACY' | translate }}</p>
           }
         </div>
 
         <button class="contact-me__submit" type="submit" [class.contact-me__submit--ready]="contactForm.valid">
           <!-- [disabled]="!contactForm.valid" -->
-          Send message
+          {{ 'CONTACT.SUBMIT' | translate }}
         </button>
       </form>
     </div>

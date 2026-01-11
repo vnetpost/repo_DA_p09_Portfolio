@@ -1,7 +1,6 @@
 @use '../../../styles/index' as styles;
 
 .contact-me {
-  // scroll-margin-top: calc(-1 * styles.$header-height);
   background: #000000;
   padding: clamp(5rem, 9vw, 8rem) styles.$g-pad-x 0;
   padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
@@ -27,7 +26,7 @@
       ),
       $size: clamp(3em, 9vw, 5.5em),
       $weight: 800,
-      $line-height: 0.7,
+      $line-height: 1,
       $color: inherit
     );
 
@@ -37,7 +36,6 @@
   }
 
   &__content {
-    // width: 62rem;
     @include styles.setFlex($d: column, $ai: center, $gap: clamp(1.2rem, 3vw, 2rem));
   }
 

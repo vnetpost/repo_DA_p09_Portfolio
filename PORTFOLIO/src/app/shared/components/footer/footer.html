@@ -1,8 +1,8 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__brand">
-      <a class="footer__logo" routerLink="/" aria-label="Go to homepage">
-        <img src="/assets/img/logo/logo1.svg" alt="logo" />
+      <a class="footer__logo" routerLink="/" [attr.aria-label]="'FOOTER.LOGO_ARIA' | translate">
+        <img src="/assets/img/logo/logo1.svg" [attr.alt]="'FOOTER.LOGO_ALT' | translate" />
       </a>
       <span class="footer__copyright">
         © {{ userDBS.personalInfo.name }} {{ userDBS.personalInfo.currentYear }}
@@ -13,18 +13,21 @@
     </div>
 
     <div class="footer__right">
-      <div class="footer__social-links" aria-label="Social links">
-        <a href="#" aria-label="GitHub profile">
-          <img class="footer__icon" src="/assets/img/icons/github.svg" alt="GitHub icon" />
+      <div class="footer__social-links" [attr.aria-label]="'FOOTER.SOCIAL_ARIA' | translate">
+        <a href="#" [attr.aria-label]="'FOOTER.SOCIAL_GITHUB_ARIA' | translate">
+          <img class="footer__icon" src="/assets/img/icons/github.svg"
+            [attr.alt]="'FOOTER.SOCIAL_GITHUB_ALT' | translate" />
         </a>
-        <a href="#" aria-label="Send email">
-          <img class="footer__icon" src="/assets/img/icons/mail.svg" alt="Mail icon" />
+        <a href="#" [attr.aria-label]="'FOOTER.SOCIAL_MAIL_ARIA' | translate">
+          <img class="footer__icon" src="/assets/img/icons/mail.svg"
+            [attr.alt]="'FOOTER.SOCIAL_MAIL_ALT' | translate" />
         </a>
-        <a href="#" aria-label="LinkedIn profile">
-          <img class="footer__icon" src="/assets/img/icons/linkedIn.svg" alt="LinkedIn icon" />
+        <a href="#" [attr.aria-label]="'FOOTER.SOCIAL_LINKEDIN_ARIA' | translate">
+          <img class="footer__icon" src="/assets/img/icons/linkedIn.svg"
+            [attr.alt]="'FOOTER.SOCIAL_LINKEDIN_ALT' | translate" />
         </a>
       </div>
-      <a class="footer__legal" routerLink="/legal-notice">Legal notice</a>
+      <a class="footer__legal" routerLink="/legal-notice">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
     </div>
   </div>
 </footer>

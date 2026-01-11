@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { UserDatabankService } from '../../shared/services/userDatabankService/user-databank-service';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
 })

@@ -3,7 +3,6 @@
 .legal-notice {
   padding: clamp(1.5rem, 7vw, 3rem) styles.$g-pad-x clamp(6rem, 10vw, 9rem);
   width: 100%;
-  //   @include styles.setFlex();
 
   &__frame {
     position: relative;
@@ -56,7 +55,6 @@
   }
 
   &__back {
-    // display: none;
     display: block;
     position: absolute;
     top: 0;
@@ -81,10 +79,6 @@
     margin-top: clamp(2rem, 6vmin, 5rem);
     &__title {
       padding: clamp(5rem, 4vmin, 6rem) 0;
-    }
-
-    &__back {
-      // display: block;
     }
   }
 }

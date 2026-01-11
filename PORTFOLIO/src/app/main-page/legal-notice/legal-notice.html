@@ -1,12 +1,12 @@
 <section class="legal-notice" aria-labelledby="legal-notice-title">
     <div class="legal-notice__frame">
-        <a class="legal-notice__back" routerLink="/" aria-label="Back to main page">
-            <img src="/assets/img/icons/arrow-rl.svg" alt="Arrow Right to Links" />
+        <a class="legal-notice__back" routerLink="/" [attr.aria-label]="'LEGAL.BACK_ARIA' | translate">
+            <img src="/assets/img/icons/arrow-rl.svg" [attr.alt]="'LEGAL.BACK_ICON_ALT' | translate" />
         </a>
-        <h1 class="legal-notice__title" id="legal-notice-title">Legal Notice</h1>
+        <h1 class="legal-notice__title" id="legal-notice-title">{{ 'LEGAL.TITLE' | translate }}</h1>
 
         <section class="legal-notice__section" aria-labelledby="legal-imprint">
-            <h2 class="legal-notice__section-title" id="legal-imprint">Imprint</h2>
+            <h2 class="legal-notice__section-title" id="legal-imprint">{{ 'LEGAL.IMPRINT_TITLE' | translate }}</h2>
             <ul class="legal-notice__list">
                 <li>{{ userDBS.personalInfo.name }}</li>
                 <li>{{ userDBS.personalInfo.address }}</li>
@@ -15,98 +15,76 @@
         </section>
 
         <section class="legal-notice__section" aria-labelledby="legal-board">
-            <h2 class="legal-notice__section-title" id="legal-board">Exploring the Board</h2>
-            <p class="legal-notice__text">Email: {{ userDBS.personalInfo.emailAddress }}</p>
+            <h2 class="legal-notice__section-title" id="legal-board">{{ 'LEGAL.BOARD_TITLE' | translate }}</h2>
+            <p class="legal-notice__text">
+                {{ 'LEGAL.BOARD_EMAIL' | translate: { email: userDBS.personalInfo.emailAddress } }}
+            </p>
         </section>
 
         <section class="legal-notice__section" aria-labelledby="legal-terms">
-            <h2 class="legal-notice__section-title" id="legal-terms">Acceptance of terms</h2>
+            <h2 class="legal-notice__section-title" id="legal-terms">{{ 'LEGAL.TERMS_TITLE' | translate }}</h2>
             <p class="legal-notice__text">
-                By accessing and using <span class="legal-notice__accent">Portfolio</span> (Product), you acknowledge
-                and agree
-                to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be
-                presented to you from time to time. We, the listed students, may update or change the terms and
-                conditions
-                from time to time without notice.
+                {{ 'LEGAL.TERMS_P1_START' | translate }}<span class="legal-notice__accent">Portfolio</span>{{
+                'LEGAL.TERMS_P1_END' | translate }}
             </p>
         </section>
 
         <section class="legal-notice__section" aria-labelledby="legal-scope">
-            <h2 class="legal-notice__section-title" id="legal-scope">Scope and ownership of the product</h2>
+            <h2 class="legal-notice__section-title" id="legal-scope">{{ 'LEGAL.SCOPE_TITLE' | translate }}</h2>
             <p class="legal-notice__text">
-                <span class="legal-notice__accent">Portfolio</span> has been developed as part of a student group
-                project in a
-                web development bootcamp at the <span class="legal-notice__accent">Developer Akademie GmbH</span>. It
-                has an
-                educational purpose and is not intended for extensive personal &amp; business usage. As such, we cannot
-                guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this
-                Product.
+                <span class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.SCOPE_P1_AFTER_PRODUCT' | translate }}<span
+                    class="legal-notice__accent">Developer Akademie GmbH</span>{{ 'LEGAL.SCOPE_P1_AFTER_COMPANY' |
+                translate }}
             </p>
             <p class="legal-notice__text">
-                The design of <span class="legal-notice__accent">Portfolio</span> is owned by the
-                <span class="legal-notice__accent">Developer Akademie GmbH</span>. Unauthorized use, reproduction,
-                modification, distribution, or replication of the design is strictly prohibited.
+                {{ 'LEGAL.SCOPE_P2_START' | translate }}<span class="legal-notice__accent">Portfolio</span>{{
+                'LEGAL.SCOPE_P2_MIDDLE' | translate }}<span class="legal-notice__accent">Developer Akademie
+                    GmbH</span>{{ 'LEGAL.SCOPE_P2_END' | translate }}
             </p>
         </section>
 
         <section class="legal-notice__section" aria-labelledby="legal-rights">
-            <h2 class="legal-notice__section-title" id="legal-rights">Proprietary rights</h2>
+            <h2 class="legal-notice__section-title" id="legal-rights">{{ 'LEGAL.RIGHTS_TITLE' | translate }}</h2>
             <p class="legal-notice__text">
-                Aside from the design owned by <span class="legal-notice__accent">Developer Akademie GmbH</span>, we,
-                the listed
-                students, retain all proprietary rights in <span class="legal-notice__accent">Portfolio</span>,
-                including any
-                associated copyrighted material, trademarks, and other proprietary information.
+                {{ 'LEGAL.RIGHTS_P1_START' | translate }}<span class="legal-notice__accent">Developer Akademie
+                    GmbH</span>{{ 'LEGAL.RIGHTS_P1_MIDDLE' | translate }}<span
+                    class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.RIGHTS_P1_END' | translate }}
             </p>
         </section>
 
         <section class="legal-notice__section" aria-labelledby="legal-use">
-            <h2 class="legal-notice__section-title" id="legal-use">Use of the product</h2>
+            <h2 class="legal-notice__section-title" id="legal-use">{{ 'LEGAL.USE_TITLE' | translate }}</h2>
             <p class="legal-notice__text">
-                <span class="legal-notice__accent">Portfolio</span> is intended to be used for lawful purposes only, in
-                accordance with all applicable laws and regulations. Any use of <span
-                    class="legal-notice__accent">Portfolio</span>
-                for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly
-                prohibited.
-                You are solely responsible for your interactions with other users of
-                <span class="legal-notice__accent">Portfolio</span>.
+                <span class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.USE_P1_AFTER_PRODUCT_1' | translate }}<span
+                    class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.USE_P1_AFTER_PRODUCT_2' | translate }}<span
+                    class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.USE_P1_AFTER_PRODUCT_3' | translate }}
             </p>
         </section>
 
         <section class="legal-notice__section" aria-labelledby="legal-disclaimer">
             <h2 class="legal-notice__section-title" id="legal-disclaimer">
-                Disclaimer of warranties and limitation of liability
+                {{ 'LEGAL.DISCLAIMER_TITLE' | translate }}
             </h2>
             <p class="legal-notice__text">
-                <span class="legal-notice__accent">Portfolio</span> is provided "as is" without warranty of any kind,
-                whether
-                express or implied, including but not limited to the implied warranties of merchantability, fitness for
-                a
-                particular purpose, and non-infringement. In no event will we, the listed students, or the
-                <span class="legal-notice__accent">Developer Akademie</span>, be liable for any direct, indirect,
-                incidental,
-                special, consequential or exemplary damages, including but not limited to, damages for loss of profits,
-                goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such
-                damages, arising out of or in connection with the use or performance of
-                <span class="legal-notice__accent">Portfolio</span>.
+                <span class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.DISCLAIMER_P1_AFTER_PRODUCT' | translate
+                }}<span class="legal-notice__accent">Developer Akademie</span>{{ 'LEGAL.DISCLAIMER_P1_AFTER_COMPANY' |
+                translate }}<span class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.DISCLAIMER_P1_END' | translate
+                }}
             </p>
         </section>
 
         <section class="legal-notice__section" aria-labelledby="legal-indemnity">
-            <h2 class="legal-notice__section-title" id="legal-indemnity">Indemnity</h2>
+            <h2 class="legal-notice__section-title" id="legal-indemnity">{{ 'LEGAL.INDEMNITY_TITLE' | translate }}</h2>
             <p class="legal-notice__text">
-                You agree to indemnify, defend and hold harmless us, the listed students, the
-                <span class="legal-notice__accent">Developer Akademie</span>, and our affiliates, partners, officers,
-                directors,
-                agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including
-                reasonable legal fees) arising out of or relating to your use of
-                <span class="legal-notice__accent">Portfolio</span> and/or your breach of this Legal Notice.
+                {{ 'LEGAL.INDEMNITY_P1_START' | translate }}<span class="legal-notice__accent">Developer
+                    Akademie</span>{{ 'LEGAL.INDEMNITY_P1_MIDDLE' | translate }}<span
+                    class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.INDEMNITY_P1_END' | translate }}
             </p>
         </section>
 
         <p class="legal-notice__text">
-            For any questions or notices, please contact us at {{ userDBS.personalInfo.emailAddress }}.
+            {{ 'LEGAL.CONTACT_TEXT' | translate: { email: userDBS.personalInfo.emailAddress } }}
         </p>
-        <p class="legal-notice__meta">Date: July 26, 2025</p>
+        <p class="legal-notice__meta">{{ 'LEGAL.DATE_TEXT' | translate }}</p>
     </div>
 </section>

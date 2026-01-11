@@ -1,32 +1,18 @@
 <section class="privacy-policy" aria-labelledby="privacy-policy-title">
   <div class="privacy-policy__frame">
-    <a class="privacy-policy__back" routerLink="/" aria-label="Back to main page">
-      <img src="/assets/img/icons/arrow-rl.svg" alt="Arrow Right to Links" />
+    <a class="privacy-policy__back" routerLink="/" [attr.aria-label]="'POLICY.BACK_ARIA' | translate">
+      <img src="/assets/img/icons/arrow-rl.svg" [attr.alt]="'POLICY.BACK_ICON_ALT' | translate" />
     </a>
-    <h1 class="privacy-policy__title" id="privacy-policy-title">Privacy Policy</h1>
+    <h1 class="privacy-policy__title" id="privacy-policy-title">{{ 'POLICY.TITLE' | translate}}</h1>
 
     <section class="privacy-policy__section" aria-labelledby="privacy-subtitle-1">
-      <h2 class="privacy-policy__section-title" id="privacy-subtitle-1">Subtitle</h2>
-      <p class="privacy-policy__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget,
-        ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros
-        lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at,
-        lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim
-        luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a
-        neque et, imperdiet semper justo.
-      </p>
+      <h2 class="privacy-policy__section-title" id="privacy-subtitle-1">{{ 'POLICY.SECTION_1_TITLE' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'POLICY.SECTION_1_TEXT' | translate }}</p>
     </section>
 
     <section class="privacy-policy__section" aria-labelledby="privacy-subtitle-2">
-      <h2 class="privacy-policy__section-title" id="privacy-subtitle-2">Subtitle</h2>
-      <p class="privacy-policy__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget,
-        ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros
-        lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at,
-        lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim
-        luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a
-        neque et, imperdiet semper justo.
-      </p>
+      <h2 class="privacy-policy__section-title" id="privacy-subtitle-2">{{ 'POLICY.SECTION_2_TITLE' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'POLICY.SECTION_2_TEXT' | translate }}</p>
     </section>
   </div>
 </section>

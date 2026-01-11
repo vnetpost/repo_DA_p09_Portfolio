@@ -22,8 +22,10 @@
       ),
       $size: clamp(1.45em, 7vmin, 3.5em),
       $weight: 800,
-      $line-height: 0.8
+      $line-height: 1
     );
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   &__section {
@@ -40,7 +42,6 @@
   }
 
   &__back {
-    // display: none;
     display: block;
     position: absolute;
     top: 0;
@@ -65,10 +66,6 @@
     margin-top: clamp(2rem, 6vmin, 5rem);
     &__title {
       padding: clamp(5rem, 4vmin, 6rem) 0;
-    }
-
-    &__back {
-      // display: block;
     }
   }
 }

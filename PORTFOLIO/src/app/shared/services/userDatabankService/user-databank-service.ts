@@ -32,23 +32,18 @@ collaboration.`;
   referencesList = [
     {
       name: 'username1',
-      role: 'Team Partner',
-      text: `Michael really kept the team together with his great organization and clear communication.
-          We wouldn't have got this far without his commitment.`,
+      roleKey: 'REFERENCES.LIST.USER_1.ROLE',
+      textKey: 'REFERENCES.LIST.USER_1.TEXT',
     },
     {
       name: 'username2',
-      role: 'Team Partner',
-      text: `Michi was a top team colleague at DA. His positive commitment and willingness to take on
-          responsibility made a significant contribution to us achieving our goals.`,
+      roleKey: 'REFERENCES.LIST.USER_2.ROLE',
+      textKey: 'REFERENCES.LIST.USER_2.TEXT',
     },
     {
       name: 'username3',
-      role: 'Frontend Engineer',
-      text: `It was a great pleasure to work with Michael. He knows how to push and encourage team
-          members to present the best work possible, always adding something to brainstorm.
-          Regarding the well-being of group members, he was always present and available to listen
-          and help others, with a great sense of humor as well.`,
+      roleKey: 'REFERENCES.LIST.USER_3.ROLE',
+      textKey: 'REFERENCES.LIST.USER_3.TEXT',
     },
   ];
 
@@ -57,24 +52,21 @@ collaboration.`;
       name: 'Join',
       imgPath: '/assets/img/projects-photos/join.png',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
-      description:
-        'Task manager inspired by the Kanban system. Create and organize tasks using drag and drop, assign users, and manage categories.',
+      descriptionKey: 'PORTFOLIO.PROJECTS.JOIN.DESCRIPTION',
       githubUrl: '#',
     },
     {
       name: 'El Pollo Loco',
       imgPath: '/assets/img/projects-photos/elPolloLoco.png',
       stack: 'JavaScript | HTML | CSS',
-      description:
-        'Jump, collect items, and defeat enemies in a playful side-scroller game with custom animations and sound effects.',
+      descriptionKey: 'PORTFOLIO.PROJECTS.EL_POLLO_LOCO.DESCRIPTION',
       githubUrl: 'https://github.com/vnetpost/repo_DA_p08_El_Pollo_Loco.git',
     },
     {
       name: 'DABubble',
       imgPath: '/assets/img/projects-photos/da-bubble.png',
       stack: 'Angular | TypeScript | Firebase',
-      description:
-        'Slack-style team messenger with channels, threads, and emoji reactions for seamless collaboration.',
+      descriptionKey: 'PORTFOLIO.PROJECTS.DA_BUBBLE.DESCRIPTION',
       githubUrl: '#',
     },
   ];

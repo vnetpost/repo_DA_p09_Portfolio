@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { UserDatabankService } from '../../shared/services/userDatabankService/user-databank-service';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterLink, TranslatePipe],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })

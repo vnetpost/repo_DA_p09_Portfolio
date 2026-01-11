@@ -1,44 +1,42 @@
-<section class="about-me" id="about" aria-label="About me">
+<section class="about-me" id="about" [attr.aria-label]="'ABOUT.ARIA_LABEL' | translate">
   <div class="about-me__content">
-    <h2 class="about-me__title" id="about-me-title">About me</h2>
+    <h2 class="about-me__title" id="about-me-title">{{ 'ABOUT.TITLE' | translate }}</h2>
 
     <div class="about-me__body">
       <div class="about-me__body-left">
         <div class="about-me__text">
           <p class="about-me__description">
-            Write some information about yourself that is IT related. <br />
-            Why are you passionate about coding? Show a desire to learn new technologies and add a
-            brief description of your problem-solving approach.<br />
-            You can include some key traits like: analytical thinking, creativity, persistence and
-            collaboration.
+            {{ 'ABOUT.DESCRIPTION_LINE_1' | translate }}<br />
+            {{ 'ABOUT.DESCRIPTION_LINE_2' | translate }}<br />
+            {{ 'ABOUT.DESCRIPTION_LINE_3' | translate }}
           </p>
 
           <ul class="about-me__highlights">
             <li class="about-me__highlight">
               <span class="about-me__icon" aria-hidden="true">
-                <img src="/assets/img/icons/house.svg" alt="house icon" />
+                <img src="/assets/img/icons/house.svg" [attr.alt]="'ABOUT.HOUSE_ICON_ALT' | translate" />
               </span>
-              <span>Based in Nuremberg</span>
+              <span>{{ 'ABOUT.HIGHLIGHT_LOCATION' | translate }}</span>
             </li>
             <li class="about-me__highlight">
               <span class="about-me__icon" aria-hidden="true">
-                <img src="/assets/img/icons/laptop.svg" alt="laptop icon" />
+                <img src="/assets/img/icons/laptop.svg" [attr.alt]="'ABOUT.LAPTOP_ICON_ALT' | translate" />
               </span>
-              <span>Open to work Remote</span>
+              <span>{{ 'ABOUT.HIGHLIGHT_REMOTE' | translate }}</span>
             </li>
           </ul>
         </div>
-        <a class="about-me__cta" href="#contact">Let's talk</a>
+        <a class="about-me__cta" href="#contact">{{ 'ABOUT.CTA' | translate }}</a>
       </div>
 
       <div class="about-me__body-right">
         <div class="about-me__image-wrap">
-          <img class="about-me__image" src="/assets/img/misc/portrait.png" alt="Portrait photo" />
+          <img class="about-me__image" src="/assets/img/misc/portrait.png" [attr.alt]="'ABOUT.PORTRAIT_ALT' | translate" />
         </div>
       </div>
     </div>
   </div>
-  <a class="about-me__separator-link" href="#skills" aria-label="Go to skills section">
+  <a class="about-me__separator-link" href="#skills" [attr.aria-label]="'ABOUT.SEPARATOR_ARIA' | translate">
     <app-section-seperator-right-left />
   </a>
 </section>

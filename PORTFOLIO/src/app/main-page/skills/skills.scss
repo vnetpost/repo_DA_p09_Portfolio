@@ -1,13 +1,9 @@
 @use '../../../styles/index' as styles;
 
 .skills {
-  // scroll-margin-top: calc(1 / 2 * styles.$header-height);
-  // padding: 10rem styles.$g-pad-x clamp(7rem, 9vw, 8.5rem);
-  // padding: calc(1.5 * styles.$header-height) styles.$g-pad-x clamp(7rem, 9vw, 8.5rem);
   padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
   max-width: styles.$g-max-width;
   width: 100%;
-  // @include styles.setFlex($d: column, $gap: clamp(1rem, 3vw, 2rem));
   @include styles.setFlex($d: column);
 
   &__separator-link {
@@ -37,18 +33,19 @@
   }
 
   &__title {
-    // margin: 0;
-    padding: 0 clamp(1rem, 3vw, 2rem);
+    min-width: 26rem;
+    padding: 0 clamp(0.5rem, 2vw, 2rem);
     background: styles.$bg-color;
     @include styles.setFont(
       $family: (
         'Syne',
         sans-serif,
       ),
-      $size: clamp(2.6rem, 5vw, 5rem),
+      $size: clamp(1.6em, 5vw, 5rem),
       $weight: 800,
       $line-height: 0.8
     );
+    text-align: center;
 
     &:hover {
       color: #00bc8f;

@@ -1,8 +1,6 @@
 @use '../../../styles/index' as styles;
 
 .portfolio {
-  // scroll-margin-top: calc(1 / 2 * styles.$header-height);
-  // padding: 0 styles.$g-pad-x clamp(6rem, 12vw, 10rem);
   padding: calc(1.5 * styles.$header-height) styles.$g-pad-x clamp(6rem, 12vw, 10rem);
 
   &__frame {
@@ -33,6 +31,7 @@
   }
 
   &__subtitle {
+    margin-bottom: 2rem;
     max-width: 47rem;
     @include styles.setFont($size: clamp(1em, 2vw, 1.4em), $weight: 400, $line-height: 1.2);
   }
@@ -123,7 +122,6 @@
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    // @include styles.setFlex($d: column, $ai: flex-start, $gap: clamp(1rem, 1vw, 2rem));
     @include styles.setFlex($d: column, $ai: flex-start);
     padding-top: 5%;
   }
@@ -135,7 +133,7 @@
         'Syne',
         sans-serif,
       ),
-      $size: clamp(2.4rem, 4.5vw, 3.8rem),
+      $size: clamp(1.5em, 4.5vw, 2.5em),
       $weight: 800,
       $line-height: 0.8
     );
@@ -155,11 +153,9 @@
   }
 
   &__link {
-    display: inline-flex;
     padding: 0.9rem 3.2rem;
     border: 0.3rem solid #000000;
-    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.12);
-    @include styles.setFont($size: 1.1rem, $weight: 500);
+    @include styles.setFont($size: 1em, $weight: 500);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 
     &:hover {

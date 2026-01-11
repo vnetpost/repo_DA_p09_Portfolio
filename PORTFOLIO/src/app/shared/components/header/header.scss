@@ -145,7 +145,7 @@
   }
 
   &__nav {
-    // 
+    //
     flex: 1;
     @include styles.setFlex($d: column, $gap: clamp(3rem, 5vw, 4rem));
     text-align: center;
@@ -153,10 +153,8 @@
   }
 
   &__nav-link {
-    // 
-    // @include styles.setFlex($gap: clamp(1rem, 3vw, 2.2rem));
     display: block;
-    width: clamp(18rem, 40vmin, 53rem);
+    width: clamp(21rem, 40vmin, 53rem);
     text-decoration: none;
     @include styles.setFont(
       $family: (
@@ -166,6 +164,7 @@
       $size: styles.$menu-overlay-title-size,
       $weight: 700
     );
+    text-align: left;
 
     &:hover .menu-overlay__nav-link-anim {
       animation: nav-link-animation 300ms ease-in-out forwards;
@@ -179,22 +178,20 @@
     position: absolute;
     width: 6%;
     height: 40%;
-    transform: translate(-50%, -70%);
+    transform: translate(-90%, -70%);
     opacity: 1;
   }
 
   &__footer {
-    
     clip-path: polygon(0 0, 100% clamp(20%, 20vw, 60%), 100% 100%, 0 100%);
     background: #000000;
     @include styles.setFont($family: null, $size: null, $style: null, $color: #fff);
     @include styles.setFlex($d: column);
-    // padding: clamp(2rem, 6vw, 5rem) styles.$g-pad-x;
     padding: 0 styles.$g-pad-x clamp(2rem, 6vw, 5rem);
   }
 
   &__contact {
-    // 
+    //
     margin: 20rem 0 5rem;
     align-self: flex-start;
 
@@ -235,7 +232,6 @@
   }
 
   &__social-links {
-    
     align-self: flex-end;
     @include styles.setFlex($gap: 4.5rem);
   }

@@ -1,9 +1,9 @@
-<section class="portfolio" id="portfolio" aria-label="Portfolio">
+<section class="portfolio" id="portfolio" [attr.aria-label]="'PORTFOLIO.ARIA_LABEL' | translate">
   <div class="portfolio__frame">
     <header class="portfolio__header">
-      <h2 class="portfolio__title" id="portfolio-title">Portfolio</h2>
+      <h2 class="portfolio__title" id="portfolio-title">{{ 'PORTFOLIO.TITLE' | translate }}</h2>
       <p class="portfolio__subtitle">
-        Explore a selection of my work here - interact with projects to see my skills in action.
+        {{ 'PORTFOLIO.SUBTITLE' | translate }}
       </p>
     </header>
 
@@ -13,16 +13,17 @@
         <figure class="portfolio__media">
           <img class="portfolio__image" [src]="project.imgPath" [alt]="project.name + ' project preview'" />
           <span class="portfolio__hover-arrow-box" aria-hidden="true">
-            <img class="portfolio__hover-arrow-icon" src="/assets/img/icons/arrow.svg" alt="Arrow icon" />
+            <img class="portfolio__hover-arrow-icon" src="/assets/img/icons/arrow.svg"
+              [attr.alt]="'PORTFOLIO.ARROW_ALT' | translate" />
           </span>
         </figure>
 
         <div class="portfolio__details">
           <h3 class="portfolio__name">{{ project.name }}</h3>
           <p class="portfolio__stack">{{ project.stack }}</p>
-          <p class="portfolio__description">{{ project.description }}</p>
+          <p class="portfolio__description">{{ project.descriptionKey | translate }}</p>
           <a class="portfolio__link" [href]="project.githubUrl" target="_blank" rel="noreferrer">
-            Github
+            {{ 'PORTFOLIO.GITHUB_LINK' | translate }}
           </a>
         </div>
 
