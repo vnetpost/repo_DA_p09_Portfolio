@@ -40,7 +40,8 @@
   }
 
   &__back {
-    display: none;
+    // display: none;
+    display: block;
     position: absolute;
     top: 0;
     right: 0;
@@ -67,7 +68,7 @@
     }
 
     &__back {
-      display: block;
+      // display: block;
     }
   }
 }

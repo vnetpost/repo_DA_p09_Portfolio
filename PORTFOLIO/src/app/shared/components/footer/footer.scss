@@ -65,7 +65,7 @@
 
   &__legal {
     text-decoration: none;
-    @include styles.setFont($size: 0.9em, $weight: 400, $color: #ffffff);
+    @include styles.setFont($size: 1em, $weight: 400, $color: #ffffff);
   }
 
   @media (max-width: 768px) {

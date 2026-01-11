@@ -1,14 +1,15 @@
 @use '../../../styles/index' as styles;
 
 .contact-me {
-  scroll-margin-top: calc(-1 * styles.$header-height);
+  // scroll-margin-top: calc(-1 * styles.$header-height);
   background: #000000;
   padding: clamp(5rem, 9vw, 8rem) styles.$g-pad-x 0;
+  padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
   z-index: 1;
   @include styles.setFont($color: #ffffff);
-  top: styles.$footer-height/3;
+  top: calc(styles.$footer-height / 3);
   clip-path: polygon(0 0, 100% clamp(10%, 20vw, 15%), 100% 100%, 0 100%);
-
+  
   &__frame {
     max-width: styles.$g-max-width;
     width: 100%;
@@ -24,7 +25,7 @@
         'Syne',
         sans-serif,
       ),
-      $size: clamp(3.6rem, 9vw, 8rem),
+      $size: clamp(3em, 9vw, 5.5em),
       $weight: 800,
       $line-height: 0.7,
       $color: inherit
@@ -41,11 +42,11 @@
   }
 
   &__headline {
-    @include styles.setFont($size: clamp(1.4rem, 3vw, 2rem), $weight: 700, $color: #00bc8f);
+    @include styles.setFont($size: clamp(1em, 3vw, 1.7em), $weight: 800, $color: #00bc8f);
   }
 
   &__subheadline {
-    @include styles.setFont($size: clamp(1rem, 2.2vw, 1.4rem), $color: inherit, $weight: 400);
+    @include styles.setFont($size: clamp(1em, 3vw, 1.4em), $color: inherit, $weight: 400);
   }
 
   &__form {
@@ -60,7 +61,7 @@
     background: transparent;
     border: 0.2rem solid transparent;
     border-bottom: 0.2rem solid #ffffffcd;
-    @include styles.setFont($size: 1rem, $weight: 300, $color: inherit);
+    @include styles.setFont($size: 1em, $weight: 400, $color: inherit);
 
     &:hover {
       border: 0.2rem solid #ffffff;
@@ -100,8 +101,8 @@
     left: 1rem;
     transform: translateY(-50%);
     background: #000000;
-    @include styles.setFont($size: 1rem, $weight: 300, $color: #ffffff);
-    transition: top 0.2s ease, transform 0.2s ease, font-size 0.2s ease;
+    @include styles.setFont($size: 1em, $weight: 100, $color: #ffffff);
+    transition: top 0.2s ease, transform 360ms ease, font-size 0.2s ease;
   }
 
   &__status-icon-container {
@@ -137,13 +138,13 @@
   &__textarea:not(:placeholder-shown) + &__label {
     top: 0;
     transform: translateY(-50%);
-    font-size: 0.9rem;
+    font-size: 1em;
     padding: 0 0.5rem;
   }
 
   &__input-error {
     padding: 0.5rem 0 0;
-    @include styles.setFont($size: 0.9rem, $weight: 400, $color: red);
+    @include styles.setFont($size: 1em, $weight: 400, $color: red);
   }
 
   &__checkbox {
@@ -180,14 +181,14 @@
   }
 
   &__checkbox-text {
-    @include styles.setFont($size: 0.8em, $weight: 400, $color: inherit, $line-height: 1.5);
+    @include styles.setFont($size: 1em, $weight: 400, $color: inherit, $line-height: 1.5);
     max-width: 40rem;
   }
 
   &__link {
     display: inline-block;
     text-align: center;
-    width: 9rem;
+    min-width: 10rem;
     color: #00bc8f;
   }
 

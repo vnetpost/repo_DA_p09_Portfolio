@@ -1,16 +1,23 @@
 @use '../../../styles/index' as styles;
 
 .skills {
-  scroll-margin-top: calc(-2 * styles.$header-height);
-  padding: 0 styles.$g-pad-x clamp(7rem, 9vw, 8.5rem);
+  // scroll-margin-top: calc(1 / 2 * styles.$header-height);
+  // padding: 10rem styles.$g-pad-x clamp(7rem, 9vw, 8.5rem);
+  // padding: calc(1.5 * styles.$header-height) styles.$g-pad-x clamp(7rem, 9vw, 8.5rem);
+  padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
   max-width: styles.$g-max-width;
   width: 100%;
-  margin: 0 auto;
-  @include styles.setFlex($d: column, $gap: clamp(1rem, 3vw, 2rem));
+  // @include styles.setFlex($d: column, $gap: clamp(1rem, 3vw, 2rem));
+  @include styles.setFlex($d: column);
 
   &__separator-link {
+    margin-top: clamp(2rem, 9vw, 5rem) ;
     left: 5%;
     align-self: flex-start;
+    
+    @include styles.tabletLarge{
+      left: 20%;
+    }
   }
 
   &__frame {
@@ -30,7 +37,7 @@
   }
 
   &__title {
-    margin: 0;
+    // margin: 0;
     padding: 0 clamp(1rem, 3vw, 2rem);
     background: styles.$bg-color;
     @include styles.setFont(
@@ -90,17 +97,11 @@
   }
 
   &__cta-text {
-    @include styles.setFont($size: clamp(1.2em, 2vw, 1.4em), $weight: 400);
+    @include styles.setFont($size: clamp(1em, 2vw, 1.4em), $weight: 400);
   }
 
   &__cta-link {
     text-decoration: none;
     @include styles.setFont($weight: 400, $color: #00bc8f);
   }
-}
-
-@media (max-width: 900px) {
-}
-
-@media (max-width: 560px) {
 }

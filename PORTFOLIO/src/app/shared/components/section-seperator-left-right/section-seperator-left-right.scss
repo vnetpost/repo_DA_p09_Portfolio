@@ -1,8 +1,8 @@
 @use '../../../../styles/index' as styles;
 
 .section-seperator {
-  width: clamp(10rem, 17vw, 17rem);
-  height: clamp(10rem, 17vw, 17rem);
+  width: clamp(20rem, 17vw, 24rem);
+  height: clamp(20rem, 17vw, 24rem);
   // transform: scaleX(-1);
 
   &__icon {

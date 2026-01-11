@@ -1,17 +1,13 @@
 import {
-  APP_INITIALIZER,
   ApplicationConfig,
   provideBrowserGlobalErrorListeners,
   provideZoneChangeDetection,
 } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
-
-const initScrollOffset = (viewportScroller: ViewportScroller) => () => {
-  viewportScroller.setOffset([0, 85]);
-};
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,15 +17,17 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({
         anchorScrolling: 'enabled',
-        scrollPositionRestoration: 'top',
+        // scrollPositionRestoration: 'top',
       })
     ),
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initScrollOffset,
-      deps: [ViewportScroller],
-      multi: true,
-    },
     provideHttpClient(),
+    provideTranslateService({
+      lang: 'en',
+      fallbackLang: 'en',
+      loader: provideTranslateHttpLoader({
+        prefix: '/i18n/',
+        suffix: '.json',
+      }),
+    }),
   ],
 };

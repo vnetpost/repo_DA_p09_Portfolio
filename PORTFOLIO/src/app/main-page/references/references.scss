@@ -1,15 +1,19 @@
 @use '../../../styles/index' as styles;
 
 .references {
-  padding: clamp(4rem, 7vw, 6rem) styles.$g-pad-x;
+  padding: calc(1.5 * styles.$header-height) styles.$g-pad-x calc(2 * styles.$header-height);
   @include styles.setFlex($d: column);
 
   &__separator-link {
     position: absolute;
     bottom: 0;
-    transform: translate(-20%, 80%);
+    transform: translate(-10%, 50%);
     z-index: 1;
     align-self: flex-end;
+
+    @include styles.tabletLarge {
+      transform: translate(-5%, 40%);
+    }
   }
 
   &__frame {
@@ -71,7 +75,6 @@
   }
 
   &__name {
-    // margin: 0;
     @include styles.setFont(
       $family: (
         'Syne',
@@ -85,7 +88,7 @@
   &__role {
     text-transform: uppercase;
     letter-spacing: -0.03em;
-    @include styles.setFont($size: 0.8em, $weight: 400);
+    @include styles.setFont($size: 1em, $weight: 400);
   }
 
   &__text {
