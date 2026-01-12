@@ -1,6 +1,7 @@
 @use '../../../styles/index' as styles;
 
 .legal-notice {
+  min-height: calc(100dvh - styles.$header-height - styles.$footer-height);
   padding: clamp(1.5rem, 7vw, 3rem) styles.$g-pad-x clamp(6rem, 10vw, 9rem);
   width: 100%;
 

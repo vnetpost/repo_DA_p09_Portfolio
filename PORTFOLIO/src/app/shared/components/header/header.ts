@@ -16,12 +16,21 @@ export class Header {
   translate = inject(TranslateService);
   private readonly document: Document = inject(DOCUMENT);
   private readonly supportedLangs: Lang[] = ['en', 'de'];
+  private readonly langStorageKey = 'lang';
 
   isMenuOpen = false;
   lang: Lang = 'en';
 
   constructor() {
-    this.setLang(this.getBrowserLangOrDefault());
+    const storedLang = this.getStoredLang();
+    this.setLang(storedLang ?? this.getBrowserLangOrDefault());
+  }
+
+  private getStoredLang(): Lang | null {
+    const storedLang = localStorage.getItem(this.langStorageKey);
+    return storedLang && this.supportedLangs.includes(storedLang as Lang)
+      ? (storedLang as Lang)
+      : null;
   }
 
   private getBrowserLangOrDefault(): Lang {
@@ -35,7 +44,7 @@ export class Header {
     this.lang = l;
     this.translate.use(l);
     this.document.documentElement.lang = l;
-    console.log(this.lang);
+    localStorage.setItem(this.langStorageKey, l);
   }
 
   toggleMenu() {

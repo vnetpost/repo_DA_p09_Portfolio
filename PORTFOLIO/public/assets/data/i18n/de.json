@@ -68,7 +68,7 @@
     "ARIA_LABEL": "Einleitung",
     "TITLE_FRONTEND": "Frontend",
     "TITLE_DEVELOPER": "Entwickler",
-    "SCROLL_TEXT": "Nach unten scrollen",
+    "SCROLL_TEXT": "Scroll nach unten",
     "ARROW_ALT": "Pfeil-Icon"
   },
   "ABOUT": {
@@ -81,7 +81,7 @@
     "LAPTOP_ICON_ALT": "Laptop-Icon",
     "HIGHLIGHT_LOCATION": "Wohnhaft in Nürnberg",
     "HIGHLIGHT_REMOTE": "Offen für Remote-Arbeit",
-    "CTA": "Lass uns sprechen",
+    "CTA": "Lass uns reden",
     "PORTRAIT_ALT": "Porträtfoto",
     "SEPARATOR_ARIA": "Zum Skills-Bereich"
   },

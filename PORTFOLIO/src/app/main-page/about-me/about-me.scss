@@ -6,12 +6,12 @@
   width: 100%;
   @include styles.setFlex($d: column);
 
- &__separator-link {
-    margin-top: clamp(2rem, 9vw, 5rem) ;
+  &__separator-link {
+    margin-top: clamp(2rem, 9vw, 5rem);
     right: 5%;
     align-self: flex-end;
-    
-    @include styles.tabletLarge{
+
+    @include styles.tabletLarge {
       right: 20%;
     }
   }
@@ -84,16 +84,16 @@
 
   &__cta {
     @include styles.setFlex();
-    width: 17rem;
-    padding: 1rem 3rem;
+    width: 20rem;
+    padding: 1rem clamp(2rem, 3vw, 3rem);
     border: 0.3rem solid #000000;
     text-decoration: none;
-    @include styles.setFont($size: 1.6rem, $weight: 400);
+    @include styles.setFont($size: 1em, $weight: 400);
     align-self: center;
     transition: width 200ms ease-in, font-weight 200ms ease-in;
 
     &:hover {
-      width: 20rem;
+      width: 23rem;
       font-weight: 700;
     }
   }
@@ -162,7 +162,6 @@
 
     &__cta {
       align-self: center;
-      width: 60%;
     }
   }
 }

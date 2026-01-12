@@ -31,7 +31,7 @@
   }
 
   &__lang-button {
-    border: 0.2rem solid transparent;
+    border: 0.3rem solid transparent;
     background: transparent;
     @include styles.setFont(
       $family: (
@@ -40,7 +40,7 @@
       ),
       $size: 1em,
       $weight: 700,
-      $line-height: 1
+      $line-height: 0.7
     );
     padding: 0.2rem 0.4rem;
     cursor: pointer;
@@ -145,7 +145,6 @@
   }
 
   &__nav {
-    //
     flex: 1;
     @include styles.setFlex($d: column, $gap: clamp(3rem, 5vw, 4rem));
     text-align: center;
@@ -154,7 +153,7 @@
 
   &__nav-link {
     display: block;
-    width: clamp(21rem, 40vmin, 53rem);
+    width: clamp(21rem, 40vmin, 64rem);
     text-decoration: none;
     @include styles.setFont(
       $family: (
@@ -191,7 +190,6 @@
   }
 
   &__contact {
-    //
     margin: 20rem 0 5rem;
     align-self: flex-start;
 
@@ -211,6 +209,7 @@
       );
 
       &:hover {
+        cursor: pointer;
         @include styles.setFont($family: null, $size: null, $style: null, $color: #00bc8f);
       }
     }

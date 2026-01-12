@@ -8,7 +8,8 @@ export class UserDatabankService {
     name: 'Babak Anvari',
     address: 'Heimburgstr. 3',
     city: 'Nuremberg',
-    emailAddress: 'info@babak-anvari.com',
+    emailAddress: 'contact@babak-anvari.com',
+    githubPage: 'https://github.com/vnetpost',
     currentYear: new Date().getFullYear(),
   };
 
@@ -54,6 +55,7 @@ collaboration.`;
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
       descriptionKey: 'PORTFOLIO.PROJECTS.JOIN.DESCRIPTION',
       githubUrl: '#',
+      webUrl: '#',
     },
     {
       name: 'El Pollo Loco',
@@ -61,6 +63,7 @@ collaboration.`;
       stack: 'JavaScript | HTML | CSS',
       descriptionKey: 'PORTFOLIO.PROJECTS.EL_POLLO_LOCO.DESCRIPTION',
       githubUrl: 'https://github.com/vnetpost/repo_DA_p08_El_Pollo_Loco.git',
+      webUrl: 'https://elpolloloco.projects.babak-anvari.com',
     },
     {
       name: 'DABubble',
@@ -68,6 +71,7 @@ collaboration.`;
       stack: 'Angular | TypeScript | Firebase',
       descriptionKey: 'PORTFOLIO.PROJECTS.DA_BUBBLE.DESCRIPTION',
       githubUrl: '#',
+      webUrl: '#',
     },
   ];
 

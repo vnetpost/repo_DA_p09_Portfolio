@@ -1,20 +1,21 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__brand">
-      <a class="footer__logo" routerLink="/" [attr.aria-label]="'FOOTER.LOGO_ARIA' | translate">
+      <a class="footer__logo" routerLink="/" fragment="hero" [attr.aria-label]="'FOOTER.LOGO_ARIA' | translate">
         <img src="/assets/img/logo/logo1.svg" [attr.alt]="'FOOTER.LOGO_ALT' | translate" />
       </a>
       <span class="footer__copyright">
         © {{ userDBS.personalInfo.name }} {{ userDBS.personalInfo.currentYear }}
       </span>
-      <a class="footer__mail" [href]="'mailto:' + userDBS.personalInfo.emailAddress">
+      <a class="footer__mail" routerLink="/" fragment="contact">
         {{ userDBS.personalInfo.emailAddress }}
       </a>
     </div>
 
     <div class="footer__right">
       <div class="footer__social-links" [attr.aria-label]="'FOOTER.SOCIAL_ARIA' | translate">
-        <a href="#" [attr.aria-label]="'FOOTER.SOCIAL_GITHUB_ARIA' | translate">
+        <a [href]="userDBS.personalInfo.githubPage" target="_blank" rel="noreferrer"
+          [attr.aria-label]="'FOOTER.SOCIAL_GITHUB_ARIA' | translate">
           <img class="footer__icon" src="/assets/img/icons/github.svg"
             [attr.alt]="'FOOTER.SOCIAL_GITHUB_ALT' | translate" />
         </a>
