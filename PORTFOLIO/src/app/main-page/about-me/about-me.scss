@@ -4,6 +4,7 @@
   padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
   max-width: styles.$g-max-width;
   width: 100%;
+  margin: 0 auto;
   @include styles.setFlex($d: column);
 
   &__separator-link {
@@ -52,7 +53,7 @@
       $gap: clamp(2rem, 4vw, 3rem)
     );
     height: 100%;
-    width: clamp(28rem, 55vw, 60rem);
+    width: clamp(28rem, 55vmin, 60rem);
   }
 
   &__text {
@@ -99,7 +100,7 @@
   }
 
   &__body-right {
-    flex: 0 1 clamp(28rem, 40vw, 52rem);
+    flex: 0 1 clamp(28rem, 40vmin, 52rem);
   }
 
   &__image-wrap {
@@ -109,14 +110,15 @@
       content: '';
       position: absolute;
       inset: 0;
-      transform: translate(#{styles.$g-frame-gap}, #{styles.$g-frame-gap});
+      transform: translate(0, 0);
       border: 0.3rem solid #000000;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.2s ease 0.2s;
+      transition: transform 0.2 ease forwads, opacity 0.2s ease forwads;
     }
 
     &:hover::after {
+      transform: translate(calc(-1 * #{styles.$g-frame-gap}), calc(1 * #{styles.$g-frame-gap}));
       opacity: 1;
     }
   }
@@ -149,7 +151,8 @@
     }
 
     &__body-right {
-      width: 100%;
+      margin: auto;
+      width: 90%;
     }
 
     &__text {

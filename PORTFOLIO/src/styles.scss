@@ -22,17 +22,17 @@ html {
   > body {
     @include styles.setFont($size: 16px, $weight: 400);
 
-    height: 100dvh;
+    min-height: 100dvh;
 
-    @include styles.setFlex($d: column, $jc: '', $ai: '', $wrap: '', $gap: 0);
+    // @include styles.setFlex($d: column, $jc: '', $ai: '', $wrap: '', $gap: 0);
 
     background-color: styles.$bg-color;
     background-image: radial-gradient(#eadbc9 1px, transparent 1px);
     background-size: 36px 36px;
 
     width: 100%;
-    max-width: styles.$g-max-width;
-    margin: 0 auto;
+    // max-width: styles.$g-max-width;
+    // margin: 0 auto;
 
     &.menu-overlay-open {
       // overflow: hidden;

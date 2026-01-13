@@ -12,6 +12,7 @@
   );
   max-width: styles.$g-max-width;
   width: 100%;
+  margin: 0 auto;
 
   &__content {
     @include styles.setFlex($d: column);

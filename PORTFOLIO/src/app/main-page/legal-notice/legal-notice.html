@@ -1,9 +1,11 @@
-<section class="legal-notice" aria-labelledby="legal-notice-title">
+<section class="legal-notice" id="legal" aria-labelledby="legal-notice-title">
     <div class="legal-notice__frame">
-        <a class="legal-notice__back" routerLink="/" fragment="contact"
-            [attr.aria-label]="'LEGAL.BACK_ARIA' | translate">
-            <img src="/assets/img/icons/arrow-rl.svg" [attr.alt]="'LEGAL.BACK_ICON_ALT' | translate" />
-        </a>
+        <div class="legal-notice__back-wrap">
+            <a class="legal-notice__back" routerLink="/" fragment="contact"
+                [attr.aria-label]="'LEGAL.BACK_ARIA' | translate">
+                <img src="/assets/img/icons/arrow-rl.svg" [attr.alt]="'LEGAL.BACK_ICON_ALT' | translate" />
+            </a>
+        </div>
         <h1 class="legal-notice__title" id="legal-notice-title">{{ 'LEGAL.TITLE' | translate }}</h1>
 
         <section class="legal-notice__section" aria-labelledby="legal-imprint">

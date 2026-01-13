@@ -1,22 +1,24 @@
 @use '../../../styles/index' as styles;
 
 .references {
-  padding: calc(1.5 * styles.$header-height) styles.$g-pad-x calc(2 * styles.$header-height);
+  padding: calc(1 * styles.$header-height) styles.$g-pad-x calc(2 * styles.$header-height);
   @include styles.setFlex($d: column);
 
   &__separator-link {
     position: absolute;
     bottom: 0;
-    transform: translate(-10%, 50%);
+    right: 20%;
+    transform: translate(0%, 50%);
     z-index: 1;
     align-self: flex-end;
 
     @include styles.tabletLarge {
-      transform: translate(-5%, 40%);
+      transform: translate(10%, 50%);
     }
   }
 
   &__frame {
+    padding: 0 styles.$g-pad-x;
     max-width: styles.$g-max-width;
     width: 100%;
     margin: 0 auto;

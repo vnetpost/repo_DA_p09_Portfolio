@@ -5,6 +5,8 @@
   top: 0;
   z-index: 10;
   width: 100%;
+  max-width: styles.$g-max-width;
+  margin: 0 auto;
   background-color: styles.$bg-color;
 
   &__inner {
@@ -126,6 +128,14 @@
   position: fixed;
   inset: 0;
   height: calc(100dvh - styles.$header-height);
+  // max-width: styles.$g-max-width;
+  width: 100%;
+  margin: 0 auto;
+
+  // width: 100dvw;
+  // margin-left: calc(50% - 50vw);
+  // margin: 0 calc(50% - 50dvw);
+
   z-index: 1;
   top: styles.$header-height;
   overflow-y: auto;
@@ -182,13 +192,23 @@
   }
 
   &__footer {
-    clip-path: polygon(0 0, 100% clamp(20%, 20vw, 60%), 100% 100%, 0 100%);
+    width: 100dvw;
+    margin: 0 calc(50% - 50dvw);
+    clip-path: polygon(0 0, 100% clamp(10%, 20vw, 25%), 100% 100%, 0 100%);
     background: #000000;
     @include styles.setFont($family: null, $size: null, $style: null, $color: #fff);
-    @include styles.setFlex($d: column);
-    padding: 0 styles.$g-pad-x clamp(2rem, 6vw, 5rem);
+    // padding: 0 styles.$g-pad-x clamp(2rem, 6vw, 5rem);
   }
-
+  
+  &__footer-inner {
+    max-width: styles.$g-max-width;
+    width: 100%;
+    margin: 0 auto;
+    // padding: 0 calc(2*styles.$g-pad-x);
+    padding: 0 styles.$g-pad-x clamp(2rem, 6vw, 5rem);
+    @include styles.setFlex($d: column);
+  }
+  
   &__contact {
     margin: 20rem 0 5rem;
     align-self: flex-start;
@@ -254,7 +274,7 @@
   .menu-overlay {
     &__footer {
       .menu-overlay__contact {
-        margin: 10rem 0 5rem;
+        // margin: 10rem 0 5rem;
       }
     }
   }

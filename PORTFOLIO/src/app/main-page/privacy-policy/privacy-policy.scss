@@ -4,8 +4,10 @@
   min-height: calc(100dvh - styles.$header-height - styles.$footer-height);
   padding: clamp(1.5rem, 7vw, 3rem) styles.$g-pad-x clamp(6rem, 10vw, 9rem);
   width: 100%;
-
+  margin: 0 auto;
+  
   &__frame {
+    margin: 0 auto;
     max-width: styles.$g-max-width;
     padding: 0 clamp(0rem, 4vmin, 13rem);
     @include styles.setFlex($d: column, $ai: flex-start, $gap: clamp(2rem, 4vw, 3rem));
@@ -37,19 +39,25 @@
   }
 
   &__text {
-    max-width: 88rem;
-    @include styles.setFont($size: clamp(1rem, 2vw, 1.2rem), $line-height: 1.5);
+    // max-width: 88rem;
+    width: 100%;
+    @include styles.setFont($size: clamp(1em, 2vw, 1.2rem), $line-height: 1.5);
+  }
+
+  &__back-wrap {
+    width: 100%;
   }
 
   &__back {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: sticky;
+    top: calc(styles.$header-height + 1rem);
+    margin-left: auto;
     width: 7rem;
     height: 3.2rem;
-    transform: translate(10%, -50%);
+    font-size: 1em;
     transition: width 200ms ease;
+    z-index: 2;
 
     img {
       width: 100%;

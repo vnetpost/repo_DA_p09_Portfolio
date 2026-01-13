@@ -4,6 +4,7 @@
   padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
   max-width: styles.$g-max-width;
   width: 100%;
+  margin: 0 auto;
   @include styles.setFlex($d: column);
 
   &__separator-link {

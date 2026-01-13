@@ -65,14 +65,14 @@ collaboration.`;
       githubUrl: 'https://github.com/vnetpost/repo_DA_p08_El_Pollo_Loco.git',
       webUrl: 'https://elpolloloco.projects.babak-anvari.com',
     },
-    {
-      name: 'DABubble',
-      imgPath: '/assets/img/projects-photos/da-bubble.png',
-      stack: 'Angular | TypeScript | Firebase',
-      descriptionKey: 'PORTFOLIO.PROJECTS.DA_BUBBLE.DESCRIPTION',
-      githubUrl: '#',
-      webUrl: '#',
-    },
+    // {
+    //   name: 'DABubble',
+    //   imgPath: '/assets/img/projects-photos/da-bubble.png',
+    //   stack: 'Angular | TypeScript | Firebase',
+    //   descriptionKey: 'PORTFOLIO.PROJECTS.DA_BUBBLE.DESCRIPTION',
+    //   githubUrl: '#',
+    //   webUrl: '#',
+    // },
   ];
 
   contactFormData = {
