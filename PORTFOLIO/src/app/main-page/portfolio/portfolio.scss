@@ -3,7 +3,7 @@
 .portfolio {
   &__frame {
     max-width: styles.$g-max-width;
-    padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
+    padding: calc(1.5 * styles.$header-height) styles.$g-pad-x calc(1 * styles.$header-height);
     width: 100%;
     margin: 0 auto;
     @include styles.setFlex($d: column, $gap: clamp(3rem, 5vw, 7rem));
@@ -269,6 +269,14 @@
     &__details {
       width: 95%;
       transform: translateY(-150%);
+    }
+  }
+}
+
+@include styles.mobileSmall {
+  .portfolio {
+    &__frame {
+      padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
     }
   }
 }

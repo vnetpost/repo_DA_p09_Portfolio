@@ -49,14 +49,14 @@ collaboration.`;
   ];
 
   projectsData = [
-    {
-      name: 'Join',
-      imgPath: '/assets/img/projects-photos/join.png',
-      stack: 'Angular | TypeScript | HTML | CSS | Firebase',
-      descriptionKey: 'PORTFOLIO.PROJECTS.JOIN.DESCRIPTION',
-      githubUrl: '#',
-      webUrl: '#',
-    },
+    // {
+    //   name: 'Join',
+    //   imgPath: '/assets/img/projects-photos/join.png',
+    //   stack: 'Angular | TypeScript | HTML | CSS | Firebase',
+    //   descriptionKey: 'PORTFOLIO.PROJECTS.JOIN.DESCRIPTION',
+    //   githubUrl: '#',
+    //   webUrl: '#',
+    // },
     {
       name: 'El Pollo Loco',
       imgPath: '/assets/img/projects-photos/elPolloLoco.png',
