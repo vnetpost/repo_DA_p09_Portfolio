@@ -17,32 +17,70 @@ export class ContactMe {
   userDBS = inject(UserDatabankService);
   formData = this.userDBS.contactFormData;
 
-  mailTest = true;
+  mailTest = this.isLocalEnvironment(window.location.hostname);
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
+    endPoint: '/sendMail.php',
+    body: (payload: { name: string; email: string; msg: string }) => payload,
   };
+
+  private isLocalEnvironment(hostname: string): boolean {
+    if (
+      hostname === 'localhost' ||
+      hostname === '::1' ||
+      hostname === '0.0.0.0' ||
+      hostname.endsWith('.local')
+    ) {
+      return true;
+    }
+
+    if (/^127(?:\.\d{1,3}){3}$/.test(hostname)) {
+      return true;
+    }
+
+    if (/^10(?:\.\d{1,3}){3}$/.test(hostname)) {
+      return true;
+    }
+
+    if (/^192\.168(?:\.\d{1,3}){2}$/.test(hostname)) {
+      return true;
+    }
+
+    return /^172\.(1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2}$/.test(hostname);
+  }
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.formData)).subscribe({
-        next: (response) => {
-          ngForm.resetForm();
-        },
-        error: (error) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
-      });
+      const payload = {
+        name: this.formData.name,
+        email: this.formData.email,
+        msg: this.formData.msg,
+      };
+
+      this.http
+        .post(this.post.endPoint, this.post.body(payload), {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+        .subscribe({
+          next: (response: { ok?: boolean; message?: string } | null) => {
+            if (!response?.ok) {
+              console.error('Mail send failed', response?.message ?? 'Unexpected server response');
+              return;
+            }
+
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error('Mail send failed', error);
+          },
+        });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
+      // Local Angular dev server cannot execute PHP. Keep form workflow testable locally.
+      setTimeout(() => {
+        ngForm.resetForm();
+      }, 600);
     }
   }
 }
