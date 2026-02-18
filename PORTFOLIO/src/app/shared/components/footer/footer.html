@@ -19,11 +19,15 @@
           <img class="footer__icon" src="/assets/img/icons/github.svg"
             [attr.alt]="'FOOTER.SOCIAL_GITHUB_ALT' | translate" />
         </a>
-        <a href="#" [attr.aria-label]="'FOOTER.SOCIAL_MAIL_ARIA' | translate">
+        <a [routerLink]="['/']" fragment="contact" [attr.aria-label]="'FOOTER.SOCIAL_MAIL_ARIA' | translate">
           <img class="footer__icon" src="/assets/img/icons/mail.svg"
             [attr.alt]="'FOOTER.SOCIAL_MAIL_ALT' | translate" />
         </a>
-        <a href="#" [attr.aria-label]="'FOOTER.SOCIAL_LINKEDIN_ARIA' | translate">
+        <a
+          href="#"
+          (click)="$event.preventDefault()"
+          [attr.aria-label]="'FOOTER.SOCIAL_LINKEDIN_ARIA' | translate"
+        >
           <img class="footer__icon" src="/assets/img/icons/linkedIn.svg"
             [attr.alt]="'FOOTER.SOCIAL_LINKEDIN_ALT' | translate" />
         </a>

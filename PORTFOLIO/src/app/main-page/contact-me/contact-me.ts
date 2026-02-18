@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, OnDestroy, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -11,7 +11,7 @@ import { UserDatabankService } from '../../shared/services/userDatabankService/u
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })
-export class ContactMe {
+export class ContactMe implements OnDestroy {
   http = inject(HttpClient);
 
   userDBS = inject(UserDatabankService);
@@ -23,6 +23,18 @@ export class ContactMe {
     endPoint: '/sendMail.php',
     body: (payload: { name: string; email: string; msg: string }) => payload,
   };
+
+  toastVisible = false;
+  toastMessage = '';
+  toastType: 'success' | 'error' = 'success';
+  private toastTimerId: ReturnType<typeof setTimeout> | null = null;
+  private previousBodyOverflow: string | null = null;
+  private previousHtmlOverflow: string | null = null;
+
+  ngOnDestroy(): void {
+    this.clearToastTimer();
+    this.unlockPageScroll();
+  }
 
   private isLocalEnvironment(hostname: string): boolean {
     if (
@@ -67,20 +79,73 @@ export class ContactMe {
           next: (response: { ok?: boolean; message?: string } | null) => {
             if (!response?.ok) {
               console.error('Mail send failed', response?.message ?? 'Unexpected server response');
+              this.showToast('error');
               return;
             }
 
             ngForm.resetForm();
+            this.showToast('success');
           },
           error: (error) => {
             console.error('Mail send failed', error);
+            this.showToast('error');
           },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       // Local Angular dev server cannot execute PHP. Keep form workflow testable locally.
       setTimeout(() => {
         ngForm.resetForm();
+        this.showToast('success');
       }, 600);
+    }
+  }
+
+  private showToast(type: 'success' | 'error'): void {
+    this.clearToastTimer();
+    this.toastType = type;
+    this.toastMessage = type === 'success' ? 'Email sent!' : 'Email-sending failed!';
+    this.toastVisible = true;
+    this.lockPageScroll();
+    this.toastTimerId = setTimeout(() => {
+      this.toastVisible = false;
+      this.unlockPageScroll();
+    }, 3200);
+  }
+
+  private clearToastTimer(): void {
+    if (this.toastTimerId !== null) {
+      clearTimeout(this.toastTimerId);
+      this.toastTimerId = null;
+    }
+  }
+
+  private lockPageScroll(): void {
+    const html = document.documentElement;
+    const body = document.body;
+
+    if (this.previousHtmlOverflow === null) {
+      this.previousHtmlOverflow = html.style.overflow;
+      html.style.overflow = 'hidden';
+    }
+
+    if (this.previousBodyOverflow === null) {
+      this.previousBodyOverflow = body.style.overflow;
+      body.style.overflow = 'hidden';
+    }
+  }
+
+  private unlockPageScroll(): void {
+    const html = document.documentElement;
+    const body = document.body;
+
+    if (this.previousHtmlOverflow !== null) {
+      html.style.overflow = this.previousHtmlOverflow;
+      this.previousHtmlOverflow = null;
+    }
+
+    if (this.previousBodyOverflow !== null) {
+      body.style.overflow = this.previousBodyOverflow;
+      this.previousBodyOverflow = null;
     }
   }
 }

@@ -7,8 +7,12 @@
   padding: calc(1.5 * styles.$header-height) styles.$g-pad-x 0;
   z-index: 1;
   @include styles.setFont($color: #ffffff);
-  top: calc(styles.$footer-height / 3);
+  top: calc(styles.$footer-height / 3.8);
   clip-path: polygon(0 0, 100% clamp(10%, 20vw, 15%), 100% 100%, 0 100%);
+
+  &--toast-open {
+    clip-path: none;
+  }
 
   &__frame {
     padding: 0 styles.$g-pad-x;
@@ -31,6 +35,7 @@
       $line-height: 1,
       $color: inherit
     );
+    transition: color 240ms ease;
 
     &:hover {
       color: #00bc8f;
@@ -46,6 +51,7 @@
   }
 
   &__subheadline {
+    margin-bottom: clamp(1rem, 2.6vw, 2rem);
     @include styles.setFont($size: clamp(1em, 3vw, 1.4em), $color: inherit, $weight: 400);
   }
 
@@ -57,14 +63,19 @@
   &__input,
   &__textarea {
     width: 100%;
-    padding: 0.5rem 2.8rem 0.5rem 0.8rem;
+    min-height: 3.6rem;
+    padding: 0.9rem 2.8rem 0.9rem 0.8rem;
     background: transparent;
     border: 0.2rem solid transparent;
     border-bottom: 0.2rem solid #ffffffcd;
     @include styles.setFont($size: 1em, $weight: 400, $color: inherit);
+    transition:
+      border-color 220ms ease,
+      box-shadow 220ms ease;
 
     &:hover {
-      border: 0.2rem solid #ffffff;
+      border-color: #ffffff;
+      box-shadow: 0 0 0.8rem #ffffff26;
     }
   }
 
@@ -74,7 +85,7 @@
   }
 
   &__textarea {
-    min-height: 9rem;
+    min-height: 10.5rem;
     resize: vertical;
   }
 
@@ -102,7 +113,10 @@
     transform: translateY(-50%);
     background: #000000;
     @include styles.setFont($size: 1em, $weight: 100, $color: #ffffff);
-    transition: top 0.2s ease, transform 360ms ease, font-size 0.2s ease;
+    transition:
+      top 0.2s ease,
+      transform 360ms ease,
+      font-size 0.2s ease;
   }
 
   &__status-icon-container {
@@ -143,8 +157,17 @@
   }
 
   &__input-error {
+    margin: 0;
+    min-height: 1.9rem;
     padding: 0.5rem 0 0;
+    opacity: 0;
+    visibility: hidden;
     @include styles.setFont($size: 1em, $weight: 400, $color: red);
+  }
+
+  &__input-error--visible {
+    opacity: 1;
+    visibility: visible;
   }
 
   &__checkbox {
@@ -155,6 +178,10 @@
     width: 2.4rem;
     height: 2.4rem;
     @include styles.setFlex();
+    transition:
+      background-color 220ms ease,
+      border-radius 220ms ease,
+      transform 220ms ease;
   }
 
   &__checkbox-input {
@@ -182,30 +209,40 @@
 
   &__checkbox-text {
     @include styles.setFont($size: 1em, $weight: 400, $color: inherit, $line-height: 1.5);
-    max-width: 40rem;
+    // max-width: 40rem;
   }
 
   &__link {
     display: inline-block;
     margin: 0 0.3ch;
-    text-align: center;
     color: #00bc8f;
+    text-decoration: none;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.14em;
+    transform-origin: center;
+    transition:
+      color 220ms ease,
+      text-decoration-color 220ms ease,
+      transform 220ms ease;
   }
 
   &__checkbox:hover .contact-me__checkbox-input-container {
     background: #00bc8f;
     border-radius: 50%;
+    transform: scale(1.04);
   }
 
-  &__checkbox:hover .contact-me__link {
-    font-weight: 700;
-    letter-spacing: -0.0258em;
+  &__link:hover,
+  &__link:focus-visible {
+    color: #7ff3d4;
+    text-decoration-color: currentColor;
+    transform: scale(1.04);
   }
 
   &__submit {
     margin-bottom: 3rem;
     align-self: center;
-    width: 21rem;
+    width: 20rem;
     padding: 1rem 2rem;
     border: 0.2rem solid #4d4d4d;
     background: transparent;
@@ -214,24 +251,52 @@
         'Syne',
         sans-serif,
       ),
-      $size: clamp(1em, 9vw, 1.2em),
+      $size: clamp(1em, 9vw, 1.1em),
       $weight: 500,
       $color: #7a7a7a
     );
 
-    transition: width 200ms ease-in;
+    transition:
+      width 240ms ease,
+      transform 240ms ease,
+      box-shadow 240ms ease,
+      border-color 240ms ease,
+      color 240ms ease;
   }
 
   &__submit--ready {
     border: 0.3rem solid #ffffff;
     color: inherit;
-
     cursor: pointer;
 
     &:hover {
-      width: 23rem;
-      font-weight: 700;
+      width: 22rem;
+      transform: translateY(-0.12rem);
+      box-shadow: 0 0.6rem 1.5rem #00000066;
     }
+  }
+
+  &__toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 1rem 1.6rem;
+    border: 0.1rem solid #ffffff;
+    border-radius: 0.8rem;
+    background: #000000;
+    color: #ffffff;
+    z-index: 1200;
+    text-align: center;
+    @include styles.setFont($size: 20px, $weight: 600, $line-height: 1.3, $color: #ffffff);
+  }
+
+  &__toast-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #232323db;
+    z-index: 1100;
   }
 
   &__jump-top {
@@ -247,9 +312,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    transition:
+      transform 220ms ease,
+      filter 220ms ease;
 
     &:hover {
-      animation: arrow-go-top 200ms ease-in forwards;
+      transform: translateY(-0.3rem);
+      filter: brightness(1.2);
     }
   }
 }

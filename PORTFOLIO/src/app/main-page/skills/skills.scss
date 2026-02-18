@@ -47,6 +47,7 @@
       $line-height: 0.8
     );
     text-align: center;
+    transition: color 240ms ease;
 
     &:hover {
       color: #00bc8f;
@@ -64,9 +65,14 @@
   &__item {
     @include styles.setFlex($d: column, $gap: 0.8rem);
     flex: 0 0 clamp(9rem, 13vw, 11rem);
+    transition: transform 220ms ease;
 
     &:hover .skills__icon {
       animation: spin-horizontal 0.6s ease-in-out;
+    }
+
+    &:hover {
+      transform: translateY(-0.14rem);
     }
   }
 
@@ -76,6 +82,7 @@
     width: auto;
     height: auto;
     max-width: 60%;
+    transition: filter 220ms ease;
   }
 
   &__label {

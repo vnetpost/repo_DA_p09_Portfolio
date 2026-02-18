@@ -38,6 +38,7 @@
       $line-height: 0.7
     );
     letter-spacing: -0.02em;
+    transition: color 240ms ease;
 
     &:hover {
       color: #00bc8f;
@@ -61,9 +62,12 @@
     text-align: left;
     @include styles.setFlex($d: column, $jc: flex-start, $gap: clamp(0.8rem, 1.8vw, 1.3rem));
     flex: 1 1 clamp(15rem, 30vw, 22rem);
+    transition: border-color 240ms ease, transform 240ms ease, box-shadow 240ms ease;
 
     &:hover {
-      border: 0.3rem solid #00bc8f;
+      border-color: #00bc8f;
+      transform: translateY(-0.18rem);
+      box-shadow: 0 0.8rem 1.6rem #0000001f;
 
       .references__quote {
         filter: invert(52%) sepia(86%) saturate(451%) hue-rotate(118deg) brightness(95%)
@@ -74,6 +78,7 @@
 
   &__quote {
     width: 4rem;
+    transition: filter 240ms ease;
   }
 
   &__name {

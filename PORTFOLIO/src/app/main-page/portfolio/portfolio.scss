@@ -24,6 +24,7 @@
       $weight: 800,
       $line-height: 0.8
     );
+    transition: color 240ms ease;
 
     &:hover {
       color: #00bc8f;
@@ -164,7 +165,12 @@
     padding: 0.1rem 3rem;
     border: 0.3rem solid #000000;
     @include styles.setFont($size: 1em, $weight: 500);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      background-color 220ms ease,
+      border-color 220ms ease,
+      color 220ms ease;
 
     &:hover {
       transform: translateY(-2px);

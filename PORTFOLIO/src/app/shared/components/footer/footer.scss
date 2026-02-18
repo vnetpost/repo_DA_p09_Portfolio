@@ -55,10 +55,11 @@
 
       .footer__icon {
         width: 2.5rem;
-        transition: transform 360ms ease;
+        transition: transform 280ms ease, filter 280ms ease;
 
         &:hover {
           transform: translateY(-40%);
+          filter: brightness(1.15);
         }
       }
     }

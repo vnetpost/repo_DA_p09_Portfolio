@@ -46,6 +46,15 @@
     );
     padding: 0.2rem 0.4rem;
     cursor: pointer;
+    transition:
+      border-color 220ms ease,
+      color 220ms ease,
+      transform 220ms ease;
+
+    &:hover {
+      // border-color: #00bc8f;
+      transform: translateY(-0.2rem);
+    }
 
     &--active {
       border-color: #00bc8f;
@@ -174,6 +183,11 @@
       $weight: 700
     );
     text-align: left;
+    transition: color 220ms ease;
+
+    &:hover {
+      color: #00bc8f;
+    }
 
     &:hover .menu-overlay__nav-link-anim {
       animation: nav-link-animation 300ms ease-in-out forwards;
@@ -199,7 +213,7 @@
     @include styles.setFont($family: null, $size: null, $style: null, $color: #fff);
     // padding: 0 styles.$g-pad-x clamp(2rem, 6vw, 5rem);
   }
-  
+
   &__footer-inner {
     max-width: styles.$g-max-width;
     width: 100%;
@@ -208,7 +222,7 @@
     padding: 0 styles.$g-pad-x clamp(2rem, 6vw, 5rem);
     @include styles.setFlex($d: column);
   }
-  
+
   &__contact {
     margin: 20rem 0 5rem;
     align-self: flex-start;
@@ -227,6 +241,7 @@
         $line-height: 0.9,
         $color: #fffcf3
       );
+      transition: color 220ms ease;
 
       &:hover {
         cursor: pointer;
@@ -243,6 +258,7 @@
         $weight: 300,
         $color: #ffffffd6
       );
+      transition: color 220ms ease;
 
       &:hover {
         @include styles.setFont($family: null, $size: null, $style: null, $color: #fff);
