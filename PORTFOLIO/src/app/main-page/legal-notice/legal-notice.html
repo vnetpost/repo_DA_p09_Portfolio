@@ -1,93 +1,61 @@
 <section class="legal-notice" id="legal" aria-labelledby="legal-notice-title">
-    <div class="legal-notice__frame">
-        <div class="legal-notice__back-wrap">
-            <a class="legal-notice__back" routerLink="/" fragment="contact"
-                [attr.aria-label]="'LEGAL.BACK_ARIA' | translate">
-                <img src="/assets/img/icons/arrow-rl.svg" [attr.alt]="'LEGAL.BACK_ICON_ALT' | translate" />
-            </a>
-        </div>
-        <h1 class="legal-notice__title" id="legal-notice-title">{{ 'LEGAL.TITLE' | translate }}</h1>
-
-        <section class="legal-notice__section" aria-labelledby="legal-imprint">
-            <h2 class="legal-notice__section-title" id="legal-imprint">{{ 'LEGAL.IMPRINT_TITLE' | translate }}</h2>
-            <ul class="legal-notice__list">
-                <li>{{ userDBS.personalInfo.name }}</li>
-                <li>{{ userDBS.personalInfo.address }}</li>
-                <li>{{ userDBS.personalInfo.city }}</li>
-            </ul>
-        </section>
-
-        <section class="legal-notice__section" aria-labelledby="legal-board">
-            <h2 class="legal-notice__section-title" id="legal-board">{{ 'LEGAL.BOARD_TITLE' | translate }}</h2>
-            <p class="legal-notice__text">
-                {{ 'LEGAL.BOARD_EMAIL' | translate: { email: userDBS.personalInfo.emailAddress } }}
-            </p>
-        </section>
-
-        <section class="legal-notice__section" aria-labelledby="legal-terms">
-            <h2 class="legal-notice__section-title" id="legal-terms">{{ 'LEGAL.TERMS_TITLE' | translate }}</h2>
-            <p class="legal-notice__text">
-                {{ 'LEGAL.TERMS_P1_START' | translate }}<span class="legal-notice__accent">Portfolio</span>{{
-                'LEGAL.TERMS_P1_END' | translate }}
-            </p>
-        </section>
-
-        <section class="legal-notice__section" aria-labelledby="legal-scope">
-            <h2 class="legal-notice__section-title" id="legal-scope">{{ 'LEGAL.SCOPE_TITLE' | translate }}</h2>
-            <p class="legal-notice__text">
-                <span class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.SCOPE_P1_AFTER_PRODUCT' | translate }}<span
-                    class="legal-notice__accent">Developer Akademie GmbH</span>{{ 'LEGAL.SCOPE_P1_AFTER_COMPANY' |
-                translate }}
-            </p>
-            <p class="legal-notice__text">
-                {{ 'LEGAL.SCOPE_P2_START' | translate }}<span class="legal-notice__accent">Portfolio</span>{{
-                'LEGAL.SCOPE_P2_MIDDLE' | translate }}<span class="legal-notice__accent">Developer Akademie
-                    GmbH</span>{{ 'LEGAL.SCOPE_P2_END' | translate }}
-            </p>
-        </section>
-
-        <section class="legal-notice__section" aria-labelledby="legal-rights">
-            <h2 class="legal-notice__section-title" id="legal-rights">{{ 'LEGAL.RIGHTS_TITLE' | translate }}</h2>
-            <p class="legal-notice__text">
-                {{ 'LEGAL.RIGHTS_P1_START' | translate }}<span class="legal-notice__accent">Developer Akademie
-                    GmbH</span>{{ 'LEGAL.RIGHTS_P1_MIDDLE' | translate }}<span
-                    class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.RIGHTS_P1_END' | translate }}
-            </p>
-        </section>
-
-        <section class="legal-notice__section" aria-labelledby="legal-use">
-            <h2 class="legal-notice__section-title" id="legal-use">{{ 'LEGAL.USE_TITLE' | translate }}</h2>
-            <p class="legal-notice__text">
-                <span class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.USE_P1_AFTER_PRODUCT_1' | translate }}<span
-                    class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.USE_P1_AFTER_PRODUCT_2' | translate }}<span
-                    class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.USE_P1_AFTER_PRODUCT_3' | translate }}
-            </p>
-        </section>
-
-        <section class="legal-notice__section" aria-labelledby="legal-disclaimer">
-            <h2 class="legal-notice__section-title" id="legal-disclaimer">
-                {{ 'LEGAL.DISCLAIMER_TITLE' | translate }}
-            </h2>
-            <p class="legal-notice__text">
-                <span class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.DISCLAIMER_P1_AFTER_PRODUCT' | translate
-                }}<span class="legal-notice__accent">Developer Akademie</span>{{ 'LEGAL.DISCLAIMER_P1_AFTER_COMPANY' |
-                translate }}<span class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.DISCLAIMER_P1_END' | translate
-                }}
-            </p>
-        </section>
-
-        <section class="legal-notice__section" aria-labelledby="legal-indemnity">
-            <h2 class="legal-notice__section-title" id="legal-indemnity">{{ 'LEGAL.INDEMNITY_TITLE' | translate }}</h2>
-            <p class="legal-notice__text">
-                {{ 'LEGAL.INDEMNITY_P1_START' | translate }}<span class="legal-notice__accent">Developer
-                    Akademie</span>{{ 'LEGAL.INDEMNITY_P1_MIDDLE' | translate }}<span
-                    class="legal-notice__accent">Portfolio</span>{{ 'LEGAL.INDEMNITY_P1_END' | translate }}
-            </p>
-        </section>
-
-        <p class="legal-notice__text">
-            {{ 'LEGAL.CONTACT_TEXT' | translate: { email: userDBS.personalInfo.emailAddress } }}
-        </p>
-        <p class="legal-notice__meta">{{ 'LEGAL.DATE_TEXT' | translate }}</p>
+  <div class="legal-notice__frame">
+    <div class="legal-notice__back-wrap">
+      <a
+        class="legal-notice__back"
+        routerLink="/"
+        fragment="contact"
+        [attr.aria-label]="'LEGAL.BACK_ARIA' | translate"
+      >
+        <img src="/assets/img/icons/arrow-rl.svg" [attr.alt]="'LEGAL.BACK_ICON_ALT' | translate" />
+      </a>
     </div>
+
+    <h1 class="legal-notice__title" id="legal-notice-title">{{ 'LEGAL.TITLE' | translate }}</h1>
+
+    <section class="legal-notice__section" aria-labelledby="legal-imprint">
+      <h2 class="legal-notice__section-title" id="legal-imprint">{{ 'LEGAL.IMPRINT_TITLE' | translate }}</h2>
+      <p class="legal-notice__text">{{ 'LEGAL.IMPRINT_TEXT' | translate }}</p>
+      <ul class="legal-notice__list">
+        <li>{{ userDBS.personalInfo.name }}</li>
+        <li>{{ userDBS.personalInfo.address }}</li>
+        <li>{{ userDBS.personalInfo.city }}</li>
+      </ul>
+    </section>
+
+    <section class="legal-notice__section" aria-labelledby="legal-contact">
+      <h2 class="legal-notice__section-title" id="legal-contact">{{ 'LEGAL.CONTACT_TITLE' | translate }}</h2>
+      <p class="legal-notice__text">
+        {{ 'LEGAL.CONTACT_TEXT' | translate: { email: userDBS.personalInfo.emailAddress } }}
+      </p>
+    </section>
+
+    <section class="legal-notice__section" aria-labelledby="legal-responsible">
+      <h2 class="legal-notice__section-title" id="legal-responsible">
+        {{ 'LEGAL.RESPONSIBLE_TITLE' | translate }}
+      </h2>
+      <ul class="legal-notice__list">
+        <li>{{ userDBS.personalInfo.name }}</li>
+        <li>{{ userDBS.personalInfo.address }}</li>
+        <li>{{ userDBS.personalInfo.city }}</li>
+      </ul>
+    </section>
+
+    <section class="legal-notice__section" aria-labelledby="legal-dispute">
+      <h2 class="legal-notice__section-title" id="legal-dispute">{{ 'LEGAL.DISPUTE_TITLE' | translate }}</h2>
+      <p class="legal-notice__text">{{ 'LEGAL.DISPUTE_TEXT' | translate }}</p>
+    </section>
+
+    <section class="legal-notice__section" aria-labelledby="legal-liability">
+      <h2 class="legal-notice__section-title" id="legal-liability">{{ 'LEGAL.LIABILITY_TITLE' | translate }}</h2>
+      <p class="legal-notice__text">{{ 'LEGAL.LIABILITY_TEXT' | translate }}</p>
+    </section>
+
+    <section class="legal-notice__section" aria-labelledby="legal-copyright">
+      <h2 class="legal-notice__section-title" id="legal-copyright">{{ 'LEGAL.COPYRIGHT_TITLE' | translate }}</h2>
+      <p class="legal-notice__text">{{ 'LEGAL.COPYRIGHT_TEXT' | translate }}</p>
+    </section>
+
+    <p class="legal-notice__meta">{{ 'LEGAL.DATE_TEXT' | translate }}</p>
+  </div>
 </section>

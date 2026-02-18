@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import { UserDatabankService } from '../../shared/services/userDatabankService/user-databank-service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -8,4 +9,6 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.scss',
 })
-export class PrivacyPolicy {}
+export class PrivacyPolicy {
+  userDBS = inject(UserDatabankService);
+}
