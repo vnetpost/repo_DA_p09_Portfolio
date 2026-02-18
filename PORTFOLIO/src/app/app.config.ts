@@ -9,6 +9,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
+const i18nVersion = '2026-02-18-privacy-imprint-v1';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -26,7 +28,7 @@ export const appConfig: ApplicationConfig = {
       fallbackLang: 'en',
       loader: provideTranslateHttpLoader({
         prefix: '/assets/data/i18n/',
-        suffix: '.json',
+        suffix: `.json?v=${i18nVersion}`,
       }),
     }),
   ],
