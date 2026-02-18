@@ -32,7 +32,7 @@ collaboration.`;
 
   referencesList = [
     {
-      name: 'username1',
+      name: 'Sonja Sander',
       roleKey: 'REFERENCES.LIST.USER_1.ROLE',
       textKey: 'REFERENCES.LIST.USER_1.TEXT',
     },
@@ -49,14 +49,14 @@ collaboration.`;
   ];
 
   projectsData = [
-    // {
-    //   name: 'Join',
-    //   imgPath: '/assets/img/projects-photos/join.png',
-    //   stack: 'Angular | TypeScript | HTML | CSS | Firebase',
-    //   descriptionKey: 'PORTFOLIO.PROJECTS.JOIN.DESCRIPTION',
-    //   githubUrl: '#',
-    //   webUrl: '#',
-    // },
+    {
+      name: 'Join',
+      imgPath: '/assets/img/projects-photos/join.png',
+      stack: 'Angular | TypeScript | HTML | CSS | Firebase',
+      descriptionKey: 'PORTFOLIO.PROJECTS.JOIN.DESCRIPTION',
+      githubUrl: 'https://github.com/vnetpost/repo_DA_p10_Join.git',
+      webUrl: 'https://join.projects.babak-anvari.com',
+    },
     {
       name: 'El Pollo Loco',
       imgPath: '/assets/img/projects-photos/elPolloLoco.png',

@@ -74,9 +74,9 @@
   "ABOUT": {
     "ARIA_LABEL": "About me",
     "TITLE": "About me",
-    "DESCRIPTION_LINE_1": "Write some information about yourself that is IT related.",
-    "DESCRIPTION_LINE_2": "Why are you passionate about coding? Show a desire to learn new technologies and add a brief description of your problem-solving approach.",
-    "DESCRIPTION_LINE_3": "You can include some key traits like: analytical thinking, creativity, persistence and collaboration.",
+    "DESCRIPTION_LINE_1": "I am a Junior Frontend Developer with a completed frontend training program and an IHK qualification as a Specialist in System Integration.",
+    "DESCRIPTION_LINE_2": "My focus is on Angular, TypeScript, and well-structured component architecture. Thanks to my background in server, network, and infrastructure environments, I approach web development with a holistic technical mindset – from the frontend to the underlying system architecture.",
+    "DESCRIPTION_LINE_3": "I see new technologies and challenges as opportunities to continuously grow and expand my skill set.",
     "HOUSE_ICON_ALT": "House icon",
     "LAPTOP_ICON_ALT": "Laptop icon",
     "HIGHLIGHT_LOCATION": "Based in Nuremberg",
@@ -119,7 +119,7 @@
     "LIST": {
       "USER_1": {
         "ROLE": "Team Partner",
-        "TEXT": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+        "TEXT": "Working with Babak was a pleasure. Through regular communication, we were able to resolve issues quickly and achieve strong results together."
       },
       "USER_2": {
         "ROLE": "Team Partner",

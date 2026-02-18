@@ -74,9 +74,9 @@
   "ABOUT": {
     "ARIA_LABEL": "Über mich",
     "TITLE": "Über mich",
-    "DESCRIPTION_LINE_1": "Schreibe einige Informationen über dich, die IT-bezogen sind.",
-    "DESCRIPTION_LINE_2": "Warum begeistert dich das Programmieren? Zeige Lernbereitschaft für neue Technologien und gib eine kurze Beschreibung deines Problemlösungsansatzes.",
-    "DESCRIPTION_LINE_3": "Du kannst einige Eigenschaften nennen, z. B. analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit.",
+    "DESCRIPTION_LINE_1": "Ich bin Junior Frontend Developer mit abgeschlossener Frontend-Weiterbildung und IHK-Abschluss als Fachinformatiker für Systemintegration.",
+    "DESCRIPTION_LINE_2": "Mein Schwerpunkt liegt auf Angular, TypeScript und klar strukturierter Component-Architektur. Durch meine Erfahrung im Bereich Server, Netzwerke und Infrastruktur denke ich Webentwicklung stets ganzheitlich – vom Frontend bis zur technischen Basis.",
+    "DESCRIPTION_LINE_3": "Neue Technologien und Herausforderungen sehe ich als Chance, mich kontinuierlich weiterzuentwickeln und mein Wissen gezielt zu erweitern.",
     "HOUSE_ICON_ALT": "Haus-Icon",
     "LAPTOP_ICON_ALT": "Laptop-Icon",
     "HIGHLIGHT_LOCATION": "Wohnhaft in Nürnberg",
@@ -118,8 +118,8 @@
     "SEPARATOR_ARIA": "Zum Kontaktbereich",
     "LIST": {
       "USER_1": {
-        "ROLE": "Team-Partner",
-        "TEXT": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen."
+        "ROLE": "Team-Partnerin",
+        "TEXT": "Die Zusammenarbeit mit Babak hat Spaß gemacht. Durch den regelmäßigen Austausch konnten wir Probleme schnell lösen und gemeinsam gute Ergebnisse erzielen."
       },
       "USER_2": {
         "ROLE": "Team-Partner",
