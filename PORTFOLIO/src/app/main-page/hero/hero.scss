@@ -32,10 +32,10 @@
         'Syne',
         sans-serif,
       ),
-      $size: clamp(2rem, 9vw, 12.5rem),
+      $size: clamp(2rem, 8vw, 12.5rem),
       $weight: 800,
-      $line-height: 0.7,
-      $letter-spacing: -0.02em
+      $line-height: 0.9,
+      $letter-spacing: -0.01em
     );
     animation: hero-rise 650ms ease-out;
   }
@@ -55,13 +55,15 @@
   }
 
   &__name {
+    max-width: 22rem;
     @include styles.setFont(
       $family: (
         'Syne',
         sans-serif,
       ),
       $weight: 700,
-      $color: #00bc8f
+      $color: #00bc8f,
+      $letter-spacing: -0.05em
     );
   }
 

@@ -16,21 +16,26 @@ a {
 }
 
 button {
-  border-radius: 5%;
+  border: 0.35rem solid #000000;
+  border-radius: 2.5%;
 }
 
-img:not([src*='/icons/']):not([class*='icon']):not([class*='Icon']) {
-  border-radius: 5%;
+img{
+  border-radius: 2%;
 }
 
 html {
   @include styles.setFont($size: 10px);
   scroll-padding-top: styles.$header-height;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
 
   > body {
     @include styles.setFont($size: 16px, $weight: 400);
 
     min-height: 100dvh;
+    overflow-x: hidden;
 
     background-color: styles.$bg-color;
     background-image: radial-gradient(#eadbc9 1px, transparent 1px);

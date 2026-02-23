@@ -22,7 +22,8 @@
       ),
       $size: clamp(3.4rem, 7vw, 7.5rem),
       $weight: 800,
-      $line-height: 0.8
+      $line-height: 0.8,
+      $letter-spacing: -0.01em
     );
     transition: color 240ms ease;
 
@@ -79,24 +80,26 @@
     position: relative;
     width: 100%;
     z-index: 1;
-
+    
     &::after {
       content: '';
       position: absolute;
       inset: 0;
       transform: translate(#{styles.$g-frame-gap}, #{styles.$g-frame-gap});
       border: 0.3rem solid #000000;
+      border-radius: 2%;
       opacity: 0;
       transition: opacity 0.2s ease 0.2s;
     }
   }
-
+  
   &__image {
     position: relative;
     width: 100%;
     height: auto;
     display: block;
     border: 0.3rem solid transparent;
+    border-radius: 2.5%;
     filter: grayscale(1);
     transition: filter 0.3s ease;
   }
@@ -163,7 +166,9 @@
 
   &__link {
     padding: 0.1rem 3rem;
-    border: 0.3rem solid #000000;
+    border: 0.35rem solid #000000;
+      border-radius: 7%;
+
     @include styles.setFont($size: 1em, $weight: 500);
     transition:
       transform 220ms ease,

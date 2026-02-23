@@ -8,11 +8,11 @@
   @include styles.setFlex($d: column);
 
   &__separator-link {
-    margin-top: clamp(2rem, 9vw, 5rem) ;
+    margin-top: clamp(2rem, 9vw, 5rem);
     left: 5%;
     align-self: flex-start;
-    
-    @include styles.tabletLarge{
+
+    @include styles.tabletLarge {
       left: 20%;
     }
   }
@@ -20,6 +20,7 @@
   &__frame {
     position: relative;
     border: 0.3rem solid #000000;
+    border-radius: 1%;
     padding: clamp(4.5rem, 9vw, 6rem) clamp(2rem, 6vw, 5rem) clamp(3rem, 6vw, 5rem);
   }
 
@@ -34,7 +35,7 @@
   }
 
   &__title {
-    min-width: 26rem;
+    min-width: 25rem;
     padding: 0 clamp(0.5rem, 2vw, 2rem);
     background: styles.$bg-color;
     @include styles.setFont(
@@ -44,7 +45,8 @@
       ),
       $size: clamp(1.6em, 5vw, 5rem),
       $weight: 800,
-      $line-height: 0.8
+      $line-height: 0.8,
+      $letter-spacing: -0.02em
     );
     text-align: center;
     transition: color 240ms ease;

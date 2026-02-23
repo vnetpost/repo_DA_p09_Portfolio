@@ -143,6 +143,7 @@
   z-index: 1;
   top: styles.$header-height;
   overflow-y: auto;
+  overflow-x: hidden;
   overscroll-behavior: contain;
 
   background-color: styles.$bg-color;

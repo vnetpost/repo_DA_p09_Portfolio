@@ -39,10 +39,10 @@
       ),
       $size: clamp(1.9em, 7vw, 5em),
       $weight: 800,
-      $line-height: 0.7
+      $line-height: 0.7,
+      $letter-spacing: -0.03em
     );
-    letter-spacing: -0.02em;
-    transition: color 240ms ease;
+    transition: color 220ms ease;
 
     &:hover {
       color: #00bc8f;
