@@ -13,4 +13,10 @@ import { UserDatabankService } from '../../shared/services/userDatabankService/u
  */
 export class Hero {
   userDBS = inject(UserDatabankService);
+
+  get displayName(): string {
+    const fullName = this.userDBS.personalInfo.name?.trim() ?? '';
+    const [firstName = '', lastName = ''] = fullName.split(/\s+/);
+    return [firstName, lastName].filter(Boolean).join(' ');
+  }
 }
