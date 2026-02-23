@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class UserDatabankService {
   personalInfo = {
-    name: 'Babak Anvari',
+    name: 'Babak Anvari Bavandpouri',
     address: 'Heimburgstr. 3',
-    city: 'Nuremberg',
+    city: '90482 Nuernberg, Germany',
     emailAddress: 'contact@babak-anvari.com',
     githubPage: 'https://github.com/vnetpost',
     currentYear: new Date().getFullYear(),

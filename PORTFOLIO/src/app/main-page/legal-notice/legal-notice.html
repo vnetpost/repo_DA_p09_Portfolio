@@ -16,11 +16,11 @@
     <section class="legal-notice__section" aria-labelledby="legal-imprint">
       <h2 class="legal-notice__section-title" id="legal-imprint">{{ 'LEGAL.IMPRINT_TITLE' | translate }}</h2>
       <p class="legal-notice__text">{{ 'LEGAL.IMPRINT_TEXT' | translate }}</p>
-      <ul class="legal-notice__list">
-        <li>{{ userDBS.personalInfo.name }}</li>
-        <li>{{ userDBS.personalInfo.address }}</li>
-        <li>{{ userDBS.personalInfo.city }}</li>
-      </ul>
+      <div class="legal-notice__person">
+        <p class="legal-notice__text">{{ userDBS.personalInfo.name }}</p>
+        <p class="legal-notice__text">{{ userDBS.personalInfo.address }}</p>
+        <p class="legal-notice__text">{{ userDBS.personalInfo.city }}</p>
+      </div>
     </section>
 
     <section class="legal-notice__section" aria-labelledby="legal-contact">
@@ -34,11 +34,11 @@
       <h2 class="legal-notice__section-title" id="legal-responsible">
         {{ 'LEGAL.RESPONSIBLE_TITLE' | translate }}
       </h2>
-      <ul class="legal-notice__list">
-        <li>{{ userDBS.personalInfo.name }}</li>
-        <li>{{ userDBS.personalInfo.address }}</li>
-        <li>{{ userDBS.personalInfo.city }}</li>
-      </ul>
+      <div class="legal-notice__person">
+        <p class="legal-notice__text">{{ userDBS.personalInfo.name }}</p>
+        <p class="legal-notice__text">{{ userDBS.personalInfo.address }}</p>
+        <p class="legal-notice__text">{{ userDBS.personalInfo.city }}</p>
+      </div>
     </section>
 
     <section class="legal-notice__section" aria-labelledby="legal-dispute">

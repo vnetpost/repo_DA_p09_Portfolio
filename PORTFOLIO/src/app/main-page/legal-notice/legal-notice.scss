@@ -42,10 +42,12 @@
     @include styles.setFont($size: clamp(1em, 2vw, 1.2rem), $line-height: 1.5);
   }
 
-  &__list {
-    padding-left: 1.4rem;
-    list-style: disc;
-    @include styles.setFont($size: clamp(1em, 2vw, 1.2rem), $line-height: 1.5);
+  &__person {
+    @include styles.setFlex($d: column, $ai: flex-start, $gap: 0.1rem);
+
+    p {
+      margin: 0;
+    }
   }
 
   &__accent {
