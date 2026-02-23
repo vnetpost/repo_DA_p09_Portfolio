@@ -9,6 +9,9 @@ import { SectionSeperatorLeftRight } from '../../shared/components/section-seper
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })
+/**
+ * Represents the Skills class.
+ */
 export class Skills {
   userDBS = inject(UserDatabankService);
 }

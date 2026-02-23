@@ -11,6 +11,9 @@ type Lang = 'en' | 'de';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
+/**
+ * Represents the Header class.
+ */
 export class Header {
   userDBS = inject(UserDatabankService);
   translate = inject(TranslateService);

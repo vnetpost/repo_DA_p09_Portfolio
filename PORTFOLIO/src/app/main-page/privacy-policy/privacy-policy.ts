@@ -9,6 +9,9 @@ import { UserDatabankService } from '../../shared/services/userDatabankService/u
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.scss',
 })
+/**
+ * Represents the PrivacyPolicy class.
+ */
 export class PrivacyPolicy {
   userDBS = inject(UserDatabankService);
 }

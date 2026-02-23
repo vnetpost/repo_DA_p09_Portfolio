@@ -8,6 +8,9 @@ import { SectionSeperatorRightLeft } from '../../shared/components/section-seper
   templateUrl: './about-me.html',
   styleUrl: './about-me.scss',
 })
+/**
+ * Represents the AboutMe class.
+ */
 export class AboutMe {
 
 }

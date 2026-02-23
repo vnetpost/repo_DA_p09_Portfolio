@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './section-seperator-left-right.html',
   styleUrl: './section-seperator-left-right.scss',
 })
+/**
+ * Represents the SectionSeperatorLeftRight class.
+ */
 export class SectionSeperatorLeftRight {
 
 }

@@ -11,6 +11,9 @@ import { UserDatabankService } from '../../shared/services/userDatabankService/u
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })
+/**
+ * Represents the ContactMe class.
+ */
 export class ContactMe implements OnDestroy {
   http = inject(HttpClient);
 

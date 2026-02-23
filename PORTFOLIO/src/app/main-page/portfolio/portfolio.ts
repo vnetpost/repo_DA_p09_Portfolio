@@ -8,6 +8,9 @@ import { UserDatabankService } from '../../shared/services/userDatabankService/u
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
 })
+/**
+ * Represents the Portfolio class.
+ */
 export class Portfolio {
   userDBS = inject(UserDatabankService);
 

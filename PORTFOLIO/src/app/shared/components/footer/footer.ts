@@ -9,6 +9,9 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
+/**
+ * Represents the Footer class.
+ */
 export class Footer {
   userDBS = inject(UserDatabankService);
 }

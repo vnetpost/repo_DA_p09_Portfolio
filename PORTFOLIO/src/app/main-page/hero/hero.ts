@@ -8,6 +8,9 @@ import { UserDatabankService } from '../../shared/services/userDatabankService/u
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
+/**
+ * Represents the Hero class.
+ */
 export class Hero {
   userDBS = inject(UserDatabankService);
 }

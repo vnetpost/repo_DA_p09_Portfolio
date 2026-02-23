@@ -9,8 +9,14 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
+/**
+ * Cache-busting version token for i18n resource files.
+ */
 const i18nVersion = '2026-02-18-privacy-imprint-v1';
 
+/**
+ * Central Angular application configuration.
+ */
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),

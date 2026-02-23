@@ -9,6 +9,9 @@ import { SectionSeperatorRightLeft } from '../../shared/components/section-seper
   templateUrl: './references.html',
   styleUrl: './references.scss',
 })
+/**
+ * Represents the References class.
+ */
 export class References {
   userDBS = inject(UserDatabankService);
 }

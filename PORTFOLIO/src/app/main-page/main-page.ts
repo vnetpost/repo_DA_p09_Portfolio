@@ -12,4 +12,7 @@ import { ContactMe } from './contact-me/contact-me';
   templateUrl: './main-page.html',
   styleUrl: './main-page.scss',
 })
+/**
+ * Represents the MainPage class.
+ */
 export class MainPage {}

@@ -9,6 +9,9 @@ import { Footer } from './shared/components/footer/footer';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
+/**
+ * Represents the App class.
+ */
 export class App {
   protected readonly title = signal('PORTFOLIO');
 }

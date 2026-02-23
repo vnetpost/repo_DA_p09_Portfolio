@@ -9,6 +9,9 @@ import { UserDatabankService } from '../../shared/services/userDatabankService/u
   templateUrl: './legal-notice.html',
   styleUrl: './legal-notice.scss',
 })
+/**
+ * Represents the LegalNotice class.
+ */
 export class LegalNotice {
   userDBS = inject(UserDatabankService);
 }
