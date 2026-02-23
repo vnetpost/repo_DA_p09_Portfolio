@@ -3,7 +3,6 @@
 .section-seperator {
   width: clamp(20rem, 17vw, 24rem);
   height: clamp(20rem, 17vw, 24rem);
-  // transform: scaleX(-1);
 
   &__icon {
     position: absolute;
@@ -11,14 +10,12 @@
   }
 
   #icon1 {
-    display: none;
     display: block;
     width: 100%;
     top: -15%;
     left: -15%;
   }
   #icon2 {
-    display: none;
     display: block;
     width: 100%;
     top: -15%;
@@ -26,7 +23,6 @@
     opacity: 0;
   }
   #icon3 {
-    display: none;
     display: block;
     width: 100%;
     top: 17%;

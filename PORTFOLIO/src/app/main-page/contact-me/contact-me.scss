@@ -209,7 +209,6 @@
 
   &__checkbox-text {
     @include styles.setFont($size: 1em, $weight: 400, $color: inherit, $line-height: 1.5);
-    // max-width: 40rem;
   }
 
   &__link {

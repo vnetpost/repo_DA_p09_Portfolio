@@ -2,10 +2,8 @@
 
 .legal-notice {
   min-height: calc(100dvh - styles.$header-height - styles.$footer-height);
-  // padding: clamp(1.5rem, 7vw, 3rem) styles.$g-pad-x clamp(6rem, 10vw, 9rem);
   padding: clamp(1.5rem, 7vw, 7rem) styles.$g-pad-x clamp(6rem, 10vw, 9rem);
   width: 100%;
-  
 
   &__frame {
     max-width: styles.$g-max-width;
@@ -38,7 +36,6 @@
   }
 
   &__text {
-    // max-width: 82rem;
     @include styles.setFont($size: clamp(1em, 2vw, 1.2rem), $line-height: 1.5);
   }
 
@@ -89,8 +86,5 @@
   @media (max-width: 768px) {
     min-height: calc(100dvh - styles.$header-height - 25rem);
     margin-top: clamp(2rem, 6vmin, 5rem);
-    &__title {
-      // padding: clamp(5rem, 4vmin, 6rem) 0;
-    }
   }
 }

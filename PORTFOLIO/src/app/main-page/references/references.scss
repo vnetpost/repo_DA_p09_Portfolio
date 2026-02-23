@@ -13,7 +13,11 @@
     align-self: flex-end;
 
     @include styles.tabletLarge {
-      transform: translate(10%, 50%);
+      transform: translate(10%, 40%);
+    }
+
+    @include styles.mobileSmall {
+      transform: translate(13%, 35%);
     }
   }
 
@@ -57,12 +61,16 @@
   }
 
   &__card {
-    border: 0.3rem solid #000000;
+    border: 0.35rem solid #000000;
+    border-radius: 3%;
     padding: clamp(1.5rem, 3vw, 2.5rem);
     text-align: left;
     @include styles.setFlex($d: column, $jc: flex-start, $gap: clamp(0.8rem, 1.8vw, 1.3rem));
     flex: 1 1 clamp(15rem, 30vw, 22rem);
-    transition: border-color 240ms ease, transform 240ms ease, box-shadow 240ms ease;
+    transition:
+      border-color 240ms ease,
+      transform 240ms ease,
+      box-shadow 240ms ease;
 
     &:hover {
       border-color: #00bc8f;
@@ -90,6 +98,7 @@
       $size: clamp(1.4em, 2.4vw, 1.8em),
       $weight: 700
     );
+    text-align: center;
   }
 
   &__role {

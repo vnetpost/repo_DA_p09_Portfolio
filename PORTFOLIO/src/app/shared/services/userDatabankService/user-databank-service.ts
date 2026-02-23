@@ -37,12 +37,12 @@ collaboration.`;
       textKey: 'REFERENCES.LIST.USER_1.TEXT',
     },
     {
-      name: 'username2',
+      name: 'Lena Hoffmann',
       roleKey: 'REFERENCES.LIST.USER_2.ROLE',
       textKey: 'REFERENCES.LIST.USER_2.TEXT',
     },
     {
-      name: 'username3',
+      name: 'David Keller',
       roleKey: 'REFERENCES.LIST.USER_3.ROLE',
       textKey: 'REFERENCES.LIST.USER_3.TEXT',
     },

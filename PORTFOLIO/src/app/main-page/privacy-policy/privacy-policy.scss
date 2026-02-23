@@ -39,7 +39,6 @@
   }
 
   &__text {
-    // max-width: 88rem;
     width: 100%;
     @include styles.setFont($size: clamp(1em, 2vw, 1.2rem), $line-height: 1.5);
   }

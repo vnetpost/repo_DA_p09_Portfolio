@@ -15,6 +15,14 @@ a {
   cursor: pointer;
 }
 
+button {
+  border-radius: 5%;
+}
+
+img:not([src*='/icons/']):not([class*='icon']):not([class*='Icon']) {
+  border-radius: 5%;
+}
+
 html {
   @include styles.setFont($size: 10px);
   scroll-padding-top: styles.$header-height;
@@ -24,18 +32,10 @@ html {
 
     min-height: 100dvh;
 
-    // @include styles.setFlex($d: column, $jc: '', $ai: '', $wrap: '', $gap: 0);
-
     background-color: styles.$bg-color;
     background-image: radial-gradient(#eadbc9 1px, transparent 1px);
     background-size: 36px 36px;
 
     width: 100%;
-    // max-width: styles.$g-max-width;
-    // margin: 0 auto;
-
-    &.menu-overlay-open {
-      // overflow: hidden;
-    }
   }
 }
